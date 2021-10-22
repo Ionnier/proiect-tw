@@ -17,6 +17,48 @@
             --color_alternative: #A86B00;
             --color_alternative_lighter: #F5C167;
         }
+
+        iframe {
+            border: 5px solid var(--color_default_darker);
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        iframe+ul {
+            list-style: none;
+        }
+
+        .iframe-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .iframe-container ul {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-content: space-between;
+            margin: 0px;
+            gap: 5%;
+
+        }
+
+        .iframe-container li {
+            max-width: 100px;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            box-shadow: 0px 0px 2px 1px black;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        .iframe-container a {
+            text-decoration: none;
+            color: black;
+            margin: 0px;
+        }
     </style>
 </head>
 
@@ -96,18 +138,34 @@
                                 <summary>
                                     Exemplu pentru o subtritare in romana
                                 </summary>
-                                <iframe width="480" height="270" name="exemplu-subtritare"></iframe>
-                                <a href="https://i.redd.it/9y51qik9k0171.jpg" target="exemplu-subtritare"> <q
-                                        cite="https://www.ubisoft.com/en-gb/game/the-division/the-division-2">Nu stiu,
-                                        pula mea. niste caini. Nu
-                                        i-am intrebat cum ii cheama.</q> </a>
-                                <a href="https://i.ibb.co/wJVYDkW/Whats-App-Image-2021-10-09-at-4-23-25-PM-1.jpg"
-                                    target="exemplu-subtritare"> <q
-                                        cite="https://www.playstation.com/ro-ro/games/ratchet-and-clank-rift-apart/">Da,
-                                        e o zi minunata pentru Festivalul Eroilor aici, in Megalopolis!</q> </a>
-                                <a href="https://i.ibb.co/Kmzf0bV/Whats-App-Image-2021-10-09-at-4-23-25-PM.jpg"
-                                    target="exemplu-subtritare">Ratchet and
-                                    Clank: Rift Apart(2021) Meniu</a>
+                                <div class="iframe-container">
+                                    <iframe name="exemplu-subtritare"></iframe>
+                                    <ul>
+                                        <li>
+                                            <a href="https://i.redd.it/9y51qik9k0171.jpg" target="exemplu-subtritare">
+                                                <q
+                                                    cite="https://www.ubisoft.com/en-gb/game/the-division/the-division-2">Nu
+                                                    stiu,
+                                                    pula mea. niste caini. Nu
+                                                    i-am intrebat cum ii cheama.</q> </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://i.ibb.co/wJVYDkW/Whats-App-Image-2021-10-09-at-4-23-25-PM-1.jpg"
+                                                target="exemplu-subtritare"> <q
+                                                    cite="https://www.playstation.com/ro-ro/games/ratchet-and-clank-rift-apart/">Da,
+                                                    e o zi minunata pentru Festivalul Eroilor aici, in Megalopolis!</q>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://i.ibb.co/Kmzf0bV/Whats-App-Image-2021-10-09-at-4-23-25-PM.jpg"
+                                                target="exemplu-subtritare">Ratchet and Clank: Rift Apart(2021)
+                                                Meniu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
                             </details>
                             <blockquote
                                 cite="https://roxanamchirila.com/2019/05/23/cum-am-tradus-in-romana-tom-clancys-the-division-2/">
@@ -344,10 +402,23 @@
                     <li>
                         <details>
                             <summary>Cel mai inspirational moment pe care il cunosti?</summary>
+                            <div class="iframe-container">
+                                <iframe name="moment"></iframe>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.youtube.com/embed/JzS96auqau0" target="moment"> Moment 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/embed/XdN67NuhMW4" target="moment"> Moment 2
+                                        </a>
+                                    </li>
+                                </ul>
 
-                            <iframe width="560" height="315" name="moment"></iframe>
-                            <a href="https://www.youtube.com/embed/JzS96auqau0" target="moment"> Moment 1 </a>
-                            <a href="https://www.youtube.com/embed/XdN67NuhMW4" target="moment"> Moment 2 </a>
+                            </div>
+
+
+
 
 
                         </details>
