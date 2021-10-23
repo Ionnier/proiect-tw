@@ -16,6 +16,49 @@
             --color_default_darker: #0051A8;
             --color_alternative: #A86B00;
             --color_alternative_lighter: #F5C167;
+            --text-color-ligth: white;
+            --text-color-dark: black;
+        }
+
+        #top-arrow {
+            width: 2.5%;
+            height: auto;
+        }
+
+        #top-arrow a {
+            text-decoration: none;
+            position: sticky;
+            display: block;
+            border: 1px solid black;
+            border-radius: 50% 50% 0% 0%;
+            text-align: center;
+            background-color: var(--color_default_light);
+            box-shadow: 0px 0px 0px 0px inset black;
+            opacity: 0.4;
+            transition: 0.7s linear;
+            color: var(--text-color-dark);
+        }
+
+        #top-arrow * {
+            margin: 0px;
+        }
+
+        #top-arrow a:hover {
+            opacity: 1;
+            box-shadow: 0px 0px 1px 1px inset black;
+            background-color: var(--color_default_darker);
+            color: var(--text-color-ligth);
+
+        }
+
+        #top-arrow p {
+            scale: 0.5;
+            transition: 0.7s linear;
+
+        }
+
+        #top-arrow p:hover {
+            scale: 1;
         }
     </style>
 </head>
@@ -360,7 +403,12 @@
 
 
     <footer>
-        <a href="#">Urca sus</a>
+        <div id="top-arrow">
+            <a href="#" title="Go up">
+                <p>&#129081;</p>
+            </a>
+        </div>
+
         <address>
             <a href="mailto:maagsarba@domain.com">maagsarba@domain.com</a><br>
             <a href="tel:+40726401236">0726401236</a>
