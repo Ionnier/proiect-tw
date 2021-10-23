@@ -16,13 +16,14 @@
             --color_default_darker: #0051A8;
             --color_alternative: #A86B00;
             --color_alternative_lighter: #F5C167;
+            --animation_default: 0.5s linear;
+            --border_default: 1px solid black;
+            --text-color: black;
         }
 
         iframe {
             border: 5px solid var(--color_default_darker);
             position: relative;
-            height: 100%;
-            width: 100%;
         }
 
         iframe+ul {
@@ -32,6 +33,7 @@
         .iframe-container {
             display: flex;
             flex-direction: column-reverse;
+            width: 75%
         }
 
         .iframe-container ul {
@@ -46,17 +48,23 @@
 
         .iframe-container li {
             max-width: 100px;
-            border-left: 1px solid black;
-            border-top: 1px solid black;
-            border-right: 1px solid black;
-            box-shadow: 0px 0px 2px 1px black;
+            border-left: var(--border_default);
+            border-top: var(--border_default);
+            border-right: var(--border_default);
+            box-shadow: 0px 0px 3px 1px var(--text-color);
             padding: 5px 10px 5px 10px;
+            background-color: var(--color_default_darker);
+            transition: background-color var(--animation_default);
+            text-align: center;
+        }
 
+        .iframe-container li:hover {
+            background-color: var(--color_default_light);
         }
 
         .iframe-container a {
             text-decoration: none;
-            color: black;
+            color: var(--text-color);
             margin: 0px;
         }
     </style>
