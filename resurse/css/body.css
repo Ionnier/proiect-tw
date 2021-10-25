@@ -7,4 +7,6 @@ body {
     font-family: "Courier Prime";
     --text-color-ligth: white;
     --text-color-dark: black;
+    --animation_default: 0.5s linear;
+    --border_default: 1px solid black;
 }
