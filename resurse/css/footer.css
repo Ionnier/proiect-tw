@@ -28,8 +28,7 @@
 #top-arrow p {
     scale: 0.5;
     transition: 0.7s linear;
-
 }
-#top-arrow p:hover {
-    scale: 1;
+#top-arrow:hover p{
+    scale: 2;
 }

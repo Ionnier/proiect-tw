@@ -1,0 +1,125 @@
+body {
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+  overflow-y: auto;
+  overflow-x: auto;
+  overflow: auto auto;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#main-title {
+  grid-area: main;
+  display: grid;
+  overflow: auto auto;
+  grid-template-areas: "intro intro intro intro" "calendar tabel tabel anunturi" "zona_proprie zona_proprie zona_proprie zona_proprie" "date_site date_site utilizatori statistici";
+}
+#main-title #intro {
+  grid-area: intro;
+}
+#main-title #calendar {
+  grid-area: calendar;
+}
+#main-title #tabel {
+  grid-area: tabel;
+}
+#main-title #anunturi {
+  grid-area: anunturi;
+}
+#main-title #zona_proprie {
+  grid-area: zona_proprie;
+  display: grid;
+  overflow: auto auto;
+  grid-template-areas: "istoric istoric istoric istoric" "magazin forum blog produse" "intrebari intrebari intrebari intrebari";
+}
+#main-title #zona_proprie #istoric {
+  grid-area: istoric;
+  display: grid;
+  grid-template-areas: "name name name name" "isto-magazin isto-magazin isto-magazin isto-proiect";
+}
+#main-title #zona_proprie #istoric h3 {
+  grid-area: name;
+}
+#main-title #zona_proprie #istoric #isto-magazin {
+  grid-area: isto-magazin;
+}
+#main-title #zona_proprie #istoric #isto-proiect {
+  grid-area: isto-proiect;
+}
+#main-title #zona_proprie #magazin {
+  grid-area: magazin;
+}
+#main-title #zona_proprie #forum {
+  grid-area: forum;
+}
+#main-title #zona_proprie #blog {
+  grid-area: blog;
+}
+#main-title #zona_proprie #produse {
+  grid-area: produse;
+}
+#main-title #zona_proprie #intrebari {
+  grid-area: intrebari;
+}
+#main-title #date_site {
+  grid-area: date_site;
+}
+#main-title #utilizatori {
+  grid-area: utilizatori;
+}
+#main-title #statistici {
+  grid-area: statistici;
+}
+
+@media (max-width: 480px) {
+  #main-title {
+    grid-template-areas: "intro intro intro intro" "calendar tabel tabel anunturi" "zona_proprie zona_proprie zona_proprie zona_proprie" "date_site date_site utilizatori statistici";
+  }
+  #main-title #zona_proprie {
+    grid-template-areas: "istoric istoric istoric istoric" "magazin forum blog produse" "intrebari intrebari intrebari intrebari";
+  }
+  #main-title #zona_proprie #istoric {
+    grid-template-areas: "name name name name" "isto-magazin isto-magazin isto-magazin isto-proiect";
+  }
+}
+@media (max-width: 480px) {
+  #main-title {
+    grid-template-areas: "intro" "tabel" "calendar" "anunturi" "zona_proprie" "date_site" "utilizatori" "statistici";
+  }
+  #main-title #zona_proprie {
+    grid-template-areas: "istoric" "magazin" "forum" "blog" "produse" "intrebari";
+  }
+  #main-title #zona_proprie #istoric {
+    grid-template-areas: "name" "isto-magazin" "isto-proiect";
+  }
+}
+@media (min-width: 481px) and (max-width: 810px) {
+  #main-title {
+    grid-template-areas: "intro intro" "tabel tabel" "calendar anunturi" "zona_proprie zona_proprie" "date_site date_site" "utilizatori statistici";
+  }
+  #main-title #zona_proprie {
+    grid-template-areas: "istoric istoric" "magazin forum" "blog produse" "intrebari intrebari";
+  }
+  #main-title #zona_proprie #istoric {
+    grid-template-areas: "name name" "isto-magazin isto-magazin" "isto-proiect isto-proiect";
+  }
+}
+@media (min-width: 811px) {
+  #main-title {
+    grid-template-areas: "intro intro intro intro" "calendar tabel tabel anunturi" "zona_proprie zona_proprie zona_proprie zona_proprie" "date_site date_site utilizatori statistici";
+  }
+  #main-title #zona_proprie {
+    grid-template-areas: "istoric istoric istoric istoric" "magazin forum blog produse" "intrebari intrebari intrebari intrebari";
+  }
+  #main-title #zona_proprie #istoric {
+    grid-template-areas: "name name name name" "isto-magazin isto-magazin isto-magazin isto-proiect";
+  }
+}
+
+/*# sourceMappingURL=grid.css.map */

@@ -9,4 +9,21 @@ body {
     --text-color-dark: black;
     --animation_default: 0.5s linear;
     --border_default: 1px solid black;
+    font-size: x-large;
+}
+
+@media (max-width: 480px) {
+    body{
+        font-size: medium;
+    }
+}
+@media (min-width: 481px) and (max-width: 810px) {
+    body{
+        font-size: x-large;
+    }
+}
+@media (min-width: 811px) {
+    body{
+        font-size: xx-large;
+    }
 }

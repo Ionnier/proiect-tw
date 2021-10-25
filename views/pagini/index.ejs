@@ -7,21 +7,85 @@
     <meta name="description"
         content="Cumpara jocuri video, console si accesorii pentru acestea intr-un mod simplu si eficient">
     <link href="/resurse/css/iframe.css" rel="stylesheet">
+    <link href="/resurse/css/grid.css" rel="stylesheet">
     <%- include("../fragmente/head.ejs") %>
 
 
 <body>
     <%- include("../fragmente/header.ejs") %>
-
         <main id="main-title">
-            <section>
+
+            <div id="intro">
                 <h2>Sanbadog</h2>
+                <p>Bine ati venit pe pagina noastra!</p>
+                <p>Aici veti putea sa comercializati, discutati si citi despre numeroase lucruri in materie de
+                    jocuri.
+                </p>
+                <p>Aici toata lumea este primita indifere de platforma pe care se joaca.</p>
+                <p>Va asteptam cu mare drag!</p>
+            </div>
+
+            <div id="calendar">
+                <h2>Calendar</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+            <div id="tabel">
+                <h2>Tabel</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+            <div id="anunturi">
+                <h2>Anunturi</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+            <div id="zona_proprie">
                 <section id="istoric">
-                    <h3>
-                        <spann class="fas fa-landmark"></i> Istoric
-                    </h3>
+                    <h2>
+                        <span class="fas fa-landmark"></span> Istoric
+                    </h2>
                     <section id="isto-magazin">
-                        <h4>Despre magazin</h4>
+                        <h3>Despre magazin</h3>
                         <p>Traind intr-o tara ce nu se afla ca un public tinta pentru producatorii de continut, noi nu
                             beneficiem de anumite avantaje pe care alte tari mai dezvoltate o au. De exemplu, Gamestop
                             ofer
@@ -175,10 +239,10 @@
                         </p>
 
                         <article>
-                            <h5>
+                            <h3>
                                 <span class="fas fa-sync fa-spin"></span> Ce a fost primul jocul sau
                                 <b>consola</b>?
-                            </h5>
+                            </h3>
                             <p> Un spin-off de la celebra problema "Ce a fost primul, oul sau gaina?" la care raspunsul
                                 potrivit este ca <q lang="en"
                                     cite="https://www.science.org.au/curious/earth-environment/which-came-first-chicken-or-egg">ouale
@@ -200,9 +264,9 @@
 
                     </section>
                     <section id="isto-proiect">
-                        <h4>Despre proiect</h4>
+                        <h3>Despre proiect</h3>
                         <section>
-                            <h5> Despre Site </h5>
+                            <h4> Despre Site </h4>
                             <p> Salut, daca ai ajuns aici din intamplare probabil te-ai ratacit destul de mult. Acesta
                                 este
                                 un proiect facut de <em>mine</em>, Dragos Bahrim, pentru laboratorul <del>optionalului
@@ -211,7 +275,7 @@
                                 programa se schimba) </p>
                         </section>
                         <section>
-                            <h6> Despre alegerea temei</h6>
+                            <h4> Despre alegerea temei</h4>
                             <p> Am ales tematica unui <b>magazin de jocuri video</b> insa pentru surprinderea nimanui ca
                                 un
                                 elev ce
@@ -393,8 +457,63 @@
                         </li>
                     </ol>
                 </section>
+            </div>
 
-            </section>
+            <div id="date_site">
+                <h2>Date site</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+            <div id="utilizatori">
+                <h2>Utilizatori</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+            <div id="statistici">
+                <h2>Statistici</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet sapien vel mauris
+                    porttitor porta non nec justo. Curabitur in congue orci. Nulla lobortis orci lectus. Ut sed dui
+                    augue. Nullam eu nulla tellus. Suspendisse eros odio, elementum vitae tortor sed, porttitor
+                    pharetra neque. Nullam non ligula auctor, blandit libero vel, commodo turpis. Mauris suscipit
+                    vehicula euismod. Cras vitae ornare lorem, quis efficitur ante.
+                </p>
+                <p>
+                    Phasellus aliquet massa vitae mi pharetra, eu efficitur lacus elementum. Nulla in molestie quam.
+                    Nullam tempus sapien sit amet purus rutrum, et bibendum augue convallis. Curabitur a purus eros.
+                    Nam ac libero sapien. Nunc at pretium libero. Aliquam posuere luctus arcu, eget sagittis ante
+                    lacinia euismod. Phasellus convallis consectetur nisl et volutpat. Aliquam faucibus augue
+                    faucibus eros egestas tincidunt.
+                </p>
+            </div>
+
+
         </main>
         <%- include("../fragmente/footer.ejs") %>
 </body>
