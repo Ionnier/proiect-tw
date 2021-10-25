@@ -1,0 +1,10 @@
+body {
+    --color_default: #0076F5;
+    --color_default_light: #99CAFF;
+    --color_default_darker: #0051A8;
+    --color_alternative: #A86B00;
+    --color_alternative_lighter: #F5C167;
+    font-family: "Courier Prime";
+    --text-color-ligth: white;
+    --text-color-dark: black;
+}
