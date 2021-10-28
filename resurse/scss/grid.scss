@@ -1,0 +1,196 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+    overflow-y: auto;
+    overflow-x: auto;
+
+    overflow: auto auto;
+    background-color: var(--color_default_light);
+    background-color: var(--color_default_darker);
+}
+
+$section_border: 0.5em solid var(--color_alternative);
+$section_radius: 50px 50px 50px 50px;
+
+#intro,
+#calendar,
+#tabel,
+#anunturi,
+#isto-magazin,
+#isto-proiect,
+#magazin,
+#forum,
+#blog,
+#produse,
+#intrebari,
+#date_site,
+#utilizatori,
+#statistici,
+footer,
+#zona_proprie h2 {
+    padding: 10px;
+    background-color: var(--color_default_darker);
+    background-color: var(--color_default_light);
+    border: $section_border;
+    border-radius: $section_radius;
+}
+header {
+    grid-area: header;
+}
+footer {
+    grid-area: footer;
+}
+
+#main-title {
+    grid-area: main;
+    display: grid;
+    gap: 2em;
+    overflow: auto auto;
+    grid-template-areas:
+        "intro intro intro intro"
+        "calendar tabel tabel anunturi"
+        "zona_proprie zona_proprie zona_proprie zona_proprie"
+        "date_site date_site utilizatori statistici";
+    #intro {
+        grid-area: intro;
+    }
+    #calendar {
+        grid-area: calendar;
+    }
+    #tabel {
+        grid-area: tabel;
+    }
+    #anunturi {
+        grid-area: anunturi;
+    }
+    #zona_proprie {
+        grid-area: zona_proprie;
+        display: grid;
+        gap: 5em;
+        overflow: auto auto;
+        grid-template-areas:
+            "istoric istoric istoric istoric"
+            "magazin forum blog produse"
+            "intrebari intrebari intrebari intrebari";
+        #istoric {
+            grid-area: istoric;
+            display: grid;
+            gap: 1em;
+            grid-template-areas:
+                "name name name name"
+                "isto-magazin isto-magazin isto-magazin isto-proiect";
+            h3 {
+                grid-area: name;
+            }
+            #isto-magazin {
+                grid-area: isto-magazin;
+            }
+            #isto-proiect {
+                grid-area: isto-proiect;
+            }
+        }
+        #magazin {
+            grid-area: magazin;
+        }
+        #forum {
+            grid-area: forum;
+        }
+        #blog {
+            grid-area: blog;
+        }
+        #produse {
+            grid-area: produse;
+        }
+        #intrebari {
+            grid-area: intrebari;
+        }
+    }
+    #date_site {
+        grid-area: date_site;
+    }
+    #utilizatori {
+        grid-area: utilizatori;
+    }
+    #statistici {
+        grid-area: statistici;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-title {
+        grid-template-areas:
+            "intro intro intro intro"
+            "calendar tabel tabel anunturi"
+            "zona_proprie zona_proprie zona_proprie zona_proprie"
+            "date_site date_site utilizatori statistici";
+        #zona_proprie {
+            grid-template-areas:
+                "istoric istoric istoric istoric"
+                "magazin forum blog produse"
+                "intrebari intrebari intrebari intrebari";
+            #istoric {
+                grid-template-areas:
+                    "name name name name"
+                    "isto-magazin isto-magazin isto-magazin isto-proiect";
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #main-title {
+        grid-template-areas:
+            "intro"
+            "tabel"
+            "calendar"
+            "anunturi"
+            "zona_proprie"
+            "date_site"
+            "utilizatori"
+            "statistici";
+        #zona_proprie {
+            grid-template-areas:
+                "istoric"
+                "magazin"
+                "forum"
+                "blog"
+                "produse"
+                "intrebari";
+            #istoric {
+                grid-template-areas:
+                    "name"
+                    "isto-magazin"
+                    "isto-proiect";
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 810px) {
+    #main-title {
+        grid-template-areas:
+            "intro intro"
+            "tabel tabel"
+            "calendar anunturi"
+            "zona_proprie zona_proprie"
+            "date_site date_site"
+            "utilizatori statistici";
+        #zona_proprie {
+            grid-template-areas:
+                "istoric istoric"
+                "magazin forum"
+                "blog produse"
+                "intrebari intrebari";
+            #istoric {
+                grid-template-areas:
+                    "name name"
+                    "isto-magazin isto-magazin"
+                    "isto-proiect isto-proiect";
+            }
+        }
+    }
+}

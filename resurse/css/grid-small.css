@@ -1,0 +1,11 @@
+#main-title {
+  grid-template-areas: "intro" "tabel" "calendar" "anunturi" "zona_proprie" "date_site" "utilizatori" "statistici";
+}
+#main-title #zona_proprie {
+  grid-template-areas: "istoric" "magazin" "forum" "blog" "produse" "intrebari";
+}
+#main-title #zona_proprie #istoric {
+  grid-template-areas: "name" "isto-magazin" "isto-proiect";
+}
+
+/*# sourceMappingURL=grid-small.css.map */

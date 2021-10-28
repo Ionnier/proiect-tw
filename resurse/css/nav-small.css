@@ -1,0 +1,92 @@
+#hamburger img {
+  height: 100%;
+  width: auto;
+}
+
+#logo {
+  width: 25%;
+}
+
+@keyframes aparitie_meniu_p_btn {
+  0% {
+    transform: rotateY(80deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+nav a {
+  font-size: var(--text_size_small);
+}
+nav .a-text {
+  display: none;
+}
+
+nav #hamburger {
+  display: block;
+}
+nav #hamburger img {
+  width: 10vw;
+}
+nav ul {
+  display: none;
+}
+nav #ch-menu:checked + ul {
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+nav #ch-menu:checked + ul ul {
+  z-index: 220;
+}
+nav #ch-menu:checked + ul ul li {
+  transform-origin: 50% 50%;
+  animation-name: rotateX;
+  animation-iteration-count: 1;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+nav #ch-menu:checked + ul > li > div,
+nav #ch-menu:checked + ul > li > a {
+  z-index: 2;
+  position: relative;
+  transform-origin: 50% 50%;
+  animation-name: aparitie_meniu_p_btn;
+  animation-iteration-count: 1;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+nav li {
+  width: 100%;
+}
+nav a {
+  font-size: var(--text_size_small);
+}
+nav .a-text {
+  display: none;
+}
+
+ul ul li:hover {
+  text-decoration: none;
+}
+
+#logo {
+  width: 25vw;
+}
+
+/*# sourceMappingURL=nav-small.css.map */

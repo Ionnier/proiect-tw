@@ -1,29 +1,35 @@
 body {
-    --color_default: #0076F5;
-    --color_default_light: #99CAFF;
-    --color_default_darker: #0051A8;
-    --color_alternative: #A86B00;
-    --color_alternative_lighter: #F5C167;
+    --color_default: #0076f5;
+    --og_color_default_light: #99caff;
+    --og_color_default_darker: #0051a8;
+    --color_default_light: #bad5f3;
+    --color_default_darker: #286eb8;
+    --color_alternative: #a86b00;
+    --color_alternative_lighter: #f5c167;
     font-family: "Courier Prime";
     --text-color-ligth: white;
     --text-color-dark: black;
     --animation_default: 0.5s linear;
     --border_default: 1px solid black;
-    font-size: x-large;
+    --text_size_normal: 23px;
+    --text_size_bigger: 25px;
+    --text_size_small: 19px;
+    --text_size_smallest: 17px;
+    --text_size_medium: 21px;
 }
 
-@media (max-width: 480px) {
-    body{
-        font-size: medium;
+@media (max-width: 500px) {
+    body {
+        font-size: var(--text_size_small);
     }
 }
-@media (min-width: 481px) and (max-width: 810px) {
-    body{
-        font-size: x-large;
+@media (min-width: 501px) and (max-width: 900px) {
+    body {
+        font-size: var(--text_size_medium);
     }
 }
-@media (min-width: 811px) {
-    body{
-        font-size: xx-large;
+@media (min-width: 901px) {
+    body {
+        font-size: var(--text_size_bigger);
     }
 }

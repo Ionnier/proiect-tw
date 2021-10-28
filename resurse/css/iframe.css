@@ -1,7 +1,13 @@
 iframe {
-    border: 5px solid var(--color_default_darker);
+    border: 0.2em solid var(--color_default_darker);
     position: relative;
     height: auto;
+    width: 50%;
+    height: 50vh;
+    align-self: center;
+}
+.iframe{
+    width: 50%;
 }
 
 iframe+ul {
@@ -24,7 +30,7 @@ iframe+ul {
 }
 
 .iframe-container li {
-    max-width: 100px;
+    max-width: 5vw;
     border-left: var(--border_default);
     border-top: var(--border_default);
     border-right: var(--border_default);

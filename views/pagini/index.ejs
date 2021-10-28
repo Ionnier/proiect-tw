@@ -7,8 +7,16 @@
     <meta name="description"
         content="Cumpara jocuri video, console si accesorii pentru acestea intr-un mod simplu si eficient">
     <link href="/resurse/css/iframe.css" rel="stylesheet">
-    <link href="/resurse/css/grid.css" rel="stylesheet">
+    <!--<link href="/resurse/css/grid.css" rel="stylesheet">
+    -->
+    <link rel="stylesheet" href="/resurse/css/grid-default.css" type="text/css" />
+    <link rel="stylesheet" href="/resurse/css/grid-small.css" type="text/css" media="screen and (max-width:500px)" />
+    <link rel="stylesheet" href="/resurse/css/grid-medium.css" type="text/css"
+        media="screen and (min-width:501px) and (max-width:900px)" />
+    <link rel="stylesheet" href="/resurse/css/grid-large.css" type="text/css" media="screen and (min-width:901px)" />
+
     <%- include("../fragmente/head.ejs") %>
+</head>
 
 
 <body>
@@ -17,8 +25,9 @@
 
             <div id="intro">
                 <h2>Sanbadog</h2>
-                <p>Bine ati venit pe pagina noastra!</p>
-                <p>Aici veti putea sa comercializati, discutati si citi despre numeroase lucruri in materie de
+                <P>Bine ati venit pe pagina noastra!</P>
+                <p>Aici veti putea sa <b>comercializati</b>, <b>discutati</b> si <b>citi</b> despre numeroase lucruri in
+                    materie de
                     jocuri.
                 </p>
                 <p>Aici toata lumea este primita indifere de platforma pe care se joaca.</p>
@@ -145,25 +154,25 @@
                                         <ul>
                                             <li>
                                                 <a href="https://i.redd.it/9y51qik9k0171.jpg"
-                                                    target="exemplu-subtritare">
+                                                    target="exemplu-subtritare"
+                                                    title="Nu stiu, pula mea. niste caini. Nu i-am intrebat cum ii cheama.">
                                                     <q
                                                         cite="https://www.ubisoft.com/en-gb/game/the-division/the-division-2">Nu
-                                                        stiu,
-                                                        pula mea. niste caini. Nu
-                                                        i-am intrebat cum ii cheama.</q> </a>
+                                                        stiu...</q> </a>
                                             </li>
                                             <li>
                                                 <a href="https://i.ibb.co/wJVYDkW/Whats-App-Image-2021-10-09-at-4-23-25-PM-1.jpg"
-                                                    target="exemplu-subtritare"> <q
+                                                    target="exemplu-subtritare"
+                                                    title="Da, e o zi minunata pentru Festivalul Eroilor aici, in Megalopolis">
+                                                    <q
                                                         cite="https://www.playstation.com/ro-ro/games/ratchet-and-clank-rift-apart/">Da,
-                                                        e o zi minunata pentru Festivalul Eroilor aici, in
-                                                        Megalopolis!</q>
+                                                        e...</q>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="https://i.ibb.co/Kmzf0bV/Whats-App-Image-2021-10-09-at-4-23-25-PM.jpg"
-                                                    target="exemplu-subtritare">Ratchet and Clank: Rift Apart(2021)
-                                                    Meniu</a>
+                                                    target="exemplu-subtritare" title="Ratchet and Clank: Rift Apart(2021)
+                                                    Meniu">Meniu</a>
                                             </li>
                                         </ul>
                                     </div>

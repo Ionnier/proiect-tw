@@ -1,0 +1,19 @@
+#main-title {
+    grid-template-areas:
+        "intro intro intro intro"
+        "calendar tabel tabel anunturi"
+        "zona_proprie zona_proprie zona_proprie zona_proprie"
+        "date_site date_site utilizatori statistici";
+    #zona_proprie {
+        grid-template-areas:
+            "istoric istoric istoric istoric"
+            "magazin magazin blog blog "
+            "forum forum produse produse"
+            "intrebari intrebari intrebari intrebari";
+        #istoric {
+            grid-template-areas:
+                "name name name name"
+                "isto-magazin isto-magazin isto-magazin isto-proiect";
+        }
+    }
+}
