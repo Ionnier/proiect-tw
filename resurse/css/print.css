@@ -1,0 +1,89 @@
+#logo,
+img,
+iframe,
+video,
+.iframe,
+header,
+nav,
+#top-arrow,
+hr {
+    display: none !important;
+}
+a {
+    text-decoration: none;
+}
+.text-container {
+    border: none;
+    border-radius: none;
+    padding: 0;
+}
+
+h1 {
+    break-after: always;
+    page-break-after: always;
+    margin: 0;
+    text-decoration: underline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#pb {
+    break-after: always;
+    page-break-after: always;
+}
+
+html,
+body {
+    overflow: visible;
+    width: 210mm;
+    /* height: 297mm; */
+    /*height: 282mm;*/
+    overflow: visible !important;
+}
+
+#watermark {
+    display: block;
+    position: fixed; /*apare pe toate paginile*/
+    width: 100px;
+    height: 2cm;
+    border: 1px double black;
+    opacity: 0.65;
+    right: 0;
+    bottom: 0;
+}
+
+#banner {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 17vw;
+    text-align: center;
+    width: 80vw;
+    border: 5px dotted black;
+}
+body,
+#main-title,
+#zona-proprie,
+#istoric {
+    display: block;
+}
+
+#intro {
+    float: none;
+    display: block;
+}
+footer {
+    page-break-before: always;
+    break-before: always;
+}
+
+@page: left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+}
+@page: right {
+    margin-right: 2.5cm;
+    margin-left: 0.5cm;
+} ;

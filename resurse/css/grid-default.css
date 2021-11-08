@@ -1,11 +1,3 @@
-body {
-  display: grid;
-  grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "footer footer footer footer";
-  overflow: auto auto;
-  background-color: var(--color_default_light);
-  background-color: var(--color_default_darker);
-}
-
 #intro,
 #calendar,
 #tabel,
@@ -23,7 +15,6 @@ body {
 footer,
 #zona_proprie h2 {
   padding: 10px;
-  background-color: var(--color_default_darker);
   background-color: var(--color_default_light);
   border: 0.1em solid black;
   border-radius: 50px 50px 50px 50px;
@@ -60,20 +51,6 @@ footer {
   display: grid;
   gap: 1em;
   overflow: auto auto;
-}
-#main-title #zona_proprie #istoric {
-  grid-area: istoric;
-  display: grid;
-  gap: 0.5em;
-}
-#main-title #zona_proprie #istoric h3 {
-  grid-area: name;
-}
-#main-title #zona_proprie #istoric #isto-magazin {
-  grid-area: isto-magazin;
-}
-#main-title #zona_proprie #istoric #isto-proiect {
-  grid-area: isto-proiect;
 }
 #main-title #zona_proprie #magazin {
   grid-area: magazin;

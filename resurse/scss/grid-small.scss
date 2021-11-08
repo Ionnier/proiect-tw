@@ -10,17 +10,10 @@
         "statistici";
     #zona_proprie {
         grid-template-areas:
-            "istoric"
             "magazin"
             "forum"
             "blog"
             "produse"
             "intrebari";
-        #istoric {
-            grid-template-areas:
-                "name"
-                "isto-magazin"
-                "isto-proiect";
-        }
     }
 }

@@ -1,15 +1,3 @@
-body {
-    display: grid;
-    grid-template-areas:
-        "header header header header"
-        "nav nav nav nav"
-        "main main main main"
-        "footer footer footer footer";
-    overflow: auto auto;
-    background-color: var(--color_default_light);
-    background-color: var(--color_default_darker);
-}
-
 $section_border: 0.1em solid black;
 $section_radius: 50px 50px 50px 50px;
 
@@ -30,7 +18,6 @@ $section_radius: 50px 50px 50px 50px;
 footer,
 #zona_proprie h2 {
     padding: 10px;
-    background-color: var(--color_default_darker);
     background-color: var(--color_default_light);
     border: $section_border;
     border-radius: $section_radius;
@@ -65,20 +52,6 @@ footer {
         display: grid;
         gap: 1em;
         overflow: auto auto;
-        #istoric {
-            grid-area: istoric;
-            display: grid;
-            gap: 0.5em;
-            h3 {
-                grid-area: name;
-            }
-            #isto-magazin {
-                grid-area: isto-magazin;
-            }
-            #isto-proiect {
-                grid-area: isto-proiect;
-            }
-        }
         #magazin {
             grid-area: magazin;
         }

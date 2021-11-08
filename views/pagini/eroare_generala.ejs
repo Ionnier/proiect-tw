@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Error</title>
+    <%- include("../fragmente/head.ejs") %>
+        <style>
+            img {
+                width: 25%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            pre {
+                width: 50%;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <div class="text-container">
+
+                <h2>
+                    <%- locals.statuscode || "Unknown error" %>
+                </h2>
+
+                <img src="<%-locals.image%>" alt="Error message">
+                <% if(err.stack){ %>
+                    <hr>
+
+                    <p>
+                        <%- err.stack %>
+                    </p>
+                    <% } %>
+
+
+
+            </div>
+
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+
+</body>
+
+</html>

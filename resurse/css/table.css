@@ -1,0 +1,59 @@
+#tabel_angajati {
+  margin: 1em;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+#tabel_angajati tr {
+  background: var(--og_color_default_light);
+}
+#tabel_angajati tr:nth-child(2n + 2) {
+  background: var(--color_default_light);
+}
+#tabel_angajati tr:hover {
+  animation-name: hover_effect_row;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transform-origin: 0 0;
+}
+#tabel_angajati tr td:hover {
+  animation-name: hover_effect_cell;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transform-origin: 0 0;
+}
+#tabel_angajati a {
+  text-decoration: none;
+}
+
+#container_tabel {
+  border: var(--border_default);
+  border-radius: var(--border_radius_default);
+  overflow: hidden;
+}
+
+@keyframes hover_effect_row {
+  100% {
+    background-color: var(--color_default_darker);
+  }
+}
+@keyframes hover_effect_cell {
+  100% {
+    background-color: white;
+  }
+}
+@media (max-width: 900px) {
+  #container_tabel {
+    width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #container_tabel table {
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=table.css.map */

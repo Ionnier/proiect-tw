@@ -10,7 +10,6 @@ header {
     }
 }
 nav {
-    grid-area: nav;
     top: 0;
     position: sticky;
     background-color: var(--color_default_light);
@@ -29,7 +28,7 @@ nav {
         }
     }
     li {
-        width: 15vw;
+        width: 17vw;
         list-style-type: none;
         box-sizing: border-box;
         border: 0.1em solid black;

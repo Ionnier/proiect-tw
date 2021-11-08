@@ -2,10 +2,7 @@
   grid-template-areas: "intro intro" "tabel tabel" "calendar anunturi" "zona_proprie zona_proprie" "date_site date_site" "utilizatori statistici";
 }
 #main-title #zona_proprie {
-  grid-template-areas: "istoric istoric" "magazin forum" "blog produse" "intrebari intrebari";
-}
-#main-title #zona_proprie #istoric {
-  grid-template-areas: "name name" "isto-magazin isto-magazin" "isto-proiect isto-proiect";
+  grid-template-areas: "magazin forum" "blog produse" "intrebari intrebari";
 }
 
 /*# sourceMappingURL=grid-medium.css.map */

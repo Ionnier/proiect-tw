@@ -6,14 +6,8 @@
         "date_site date_site utilizatori statistici";
     #zona_proprie {
         grid-template-areas:
-            "istoric istoric istoric istoric"
             "magazin magazin blog blog "
             "forum forum produse produse"
             "intrebari intrebari intrebari intrebari";
-        #istoric {
-            grid-template-areas:
-                "name name name name"
-                "isto-magazin isto-magazin isto-magazin isto-proiect";
-        }
     }
 }

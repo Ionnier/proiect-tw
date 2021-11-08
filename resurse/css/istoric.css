@@ -1,0 +1,31 @@
+#istoric {
+  display: grid;
+  gap: 0.5em;
+}
+#istoric h3 {
+  grid-area: name;
+}
+#istoric #isto-magazin {
+  grid-area: isto-magazin;
+}
+#istoric #isto-proiect {
+  grid-area: isto-proiect;
+}
+
+@media (max-width: 500px) {
+  #istoric {
+    grid-template-areas: "name" "isto-magazin" "isto-proiect";
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  #istoric {
+    grid-template-areas: "name name" "isto-magazin isto-magazin" "isto-proiect isto-proiect";
+  }
+}
+@media (min-width: 901px) {
+  #istoric {
+    grid-template-areas: "name name name name" "isto-magazin isto-magazin isto-magazin isto-proiect";
+  }
+}
+
+/*# sourceMappingURL=istoric.css.map */

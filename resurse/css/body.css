@@ -10,14 +10,39 @@ body {
     --text-color-ligth: white;
     --text-color-dark: black;
     --animation_default: 0.5s linear;
-    --border_default: 1px solid black;
+    --border_default: 0.1em solid black;
+    --border_radius_default: 50px 50px 50px 50px;
     --text_size_normal: 23px;
     --text_size_bigger: 25px;
     --text_size_small: 19px;
     --text_size_smallest: 17px;
     --text_size_medium: 21px;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+    overflow: auto auto;
+    background-color: var(--color_default_darker);
 }
 
+header {
+    grid-area: header;
+}
+footer {
+    grid-area: footer;
+}
+main {
+    grid-area: main;
+}
+nav {
+    grid-area: nav;
+}
+video::cue {
+    background-color: white;
+    color: var(--color_default_darker);
+}
 @media (max-width: 500px) {
     body {
         font-size: var(--text_size_small);
@@ -32,4 +57,22 @@ body {
     body {
         font-size: var(--text_size_bigger);
     }
+}
+
+.text-container {
+    background-color: var(--color_default_light);
+    border: var(--border_default);
+    border-radius: var(--border_radius_default);
+    padding: 2vw;
+}
+
+hr {
+    height: 20px;
+    background-image: repeating-linear-gradient(var(--color_default), var(--color_default_light) 25%);
+    border-radius: 10px 10px 10px 10px;
+}
+
+#watermark,
+#absolut {
+    display: none;
 }

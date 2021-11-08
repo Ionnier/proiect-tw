@@ -1,3 +1,10 @@
+footer {
+    background-color: var(--color_default_light);
+    padding: 20px;
+    background-color: var(--color_default_light);
+    border: 0.1em solid black;
+    border-radius: 50px 50px 50px 50px;
+}
 #top-arrow {
     z-index: 250;
     width: 5vw;

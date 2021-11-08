@@ -1,0 +1,9 @@
+{
+    "cale_galerie": "/resurse/imagini",
+    "imagini": [
+        {
+            "fisier": "cale_fisier",
+            "descriere": "asds"
+        }
+    ]
+}
