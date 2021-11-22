@@ -6,7 +6,15 @@ const path = require('path')
 const sharp = require('sharp')
 const sass = require('sass')
 const ejs = require('ejs')
-const client = new Client({ connectionString: process.env.DATABASE_URL, ssl: false})
+if (!fs.existsSync(path.join(__dirname,"temp"))){
+    fs.mkdirSync(path.join(__dirname,"temp"));
+}
+const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+      }
+})
 client.connect()
 client.query("select enum_range(null::categorii_produse)", (err, res) => {
     if (err) {
@@ -21,11 +29,11 @@ client.query("select enum_range(null::categorii_produse)", (err, res) => {
         categories.splice(0, 0, "Toate")
         header = fs.readFileSync(path.join(__dirname, "views", "fragmente", "header_template.ejs")).toString("utf-8")
         to_add = ""
-        for(categorie of categories){
+        for (categorie of categories) {
             to_add += `<li><a href="${categorie}"> ${categorie} </a> </li>\n`
         }
-        header = header.replace("%$!@#$LISTA_PRODUSE%!@#$%@",to_add)
-        fs.writeFileSync(path.join(__dirname, "views", "fragmente", "header.ejs"),header)
+        header = header.replace("%$!@#$LISTA_PRODUSE%!@#$%@", to_add)
+        fs.writeFileSync(path.join(__dirname, "views", "fragmente", "header.ejs"), header)
         console.log(categories)
     }
 })
@@ -125,7 +133,7 @@ app.get("/produse", (req, res) => {
             console.log(err)
         } else {
             console.log(data)
-            res.render("pagini/produse", {produse: data.rows})
+            res.render("pagini/produse", { produse: data.rows })
         }
     })
 })
