@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const { Client } = require('pg');
 const fs = require('fs')
@@ -5,7 +6,7 @@ const path = require('path')
 const sharp = require('sharp')
 const sass = require('sass')
 const ejs = require('ejs')
-const client = new Client({ user: "dragos", password: "parola", host: "localhost", port: "5432", database: "postgres" })
+const client = new Client({ connectionString: process.env.DATABASE_URL, ssl: false})
 client.connect()
 client.query("select enum_range(null::categorii_produse)", (err, res) => {
     if (err) {
