@@ -7,7 +7,8 @@
         "zona_proprie"
         "date_site"
         "utilizatori"
-        "statistici";
+        "statistici"
+        "galerie";
     #zona_proprie {
         grid-template-areas:
             "magazin"
@@ -16,4 +17,7 @@
             "produse"
             "intrebari";
     }
+}
+#galerie-animata {
+    display: none;
 }

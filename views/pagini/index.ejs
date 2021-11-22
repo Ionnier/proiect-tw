@@ -15,6 +15,8 @@
         media="screen and (min-width:501px) and (max-width:900px)">
     <link rel="stylesheet" href="/resurse/css/grid-large.css" type="text/css" media="screen and (min-width:901px)">
     <link rel="stylesheet" href="/resurse/css/table.css" type="text/css">
+    <link rel="stylesheet" href="/resurse/css/galerie_animata.css/<%-locals.imagini_animate.length %>" type="text/css">
+    <link rel="stylesheet" href="/resurse/css/galerie.css" type="text/css">
 
 
     <%- include("../fragmente/head.ejs") %>
@@ -24,7 +26,6 @@
 <body>
     <%- include("../fragmente/header.ejs") %>
         <main id="main-title">
-
             <div id="intro">
                 <h1>Sanbadog</h1>
                 <span id="pb"></span>
@@ -324,6 +325,9 @@
                     faucibus eros egestas tincidunt.
                 </p>
             </div>
+
+            <%- include("../fragmente/galerie.ejs")%>
+                <%- include("../fragmente/galerie_animata.ejs")%>
 
 
         </main>

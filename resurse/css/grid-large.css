@@ -1,5 +1,5 @@
 #main-title {
-  grid-template-areas: "intro intro intro intro" "calendar tabel tabel anunturi" "zona_proprie zona_proprie zona_proprie zona_proprie" "date_site date_site utilizatori statistici";
+  grid-template-areas: "intro intro intro intro" "calendar tabel tabel anunturi" "zona_proprie zona_proprie zona_proprie zona_proprie" "date_site date_site utilizatori statistici" "galerie galerie galerie galerie" "galerie-animata galerie-animata galerie-animata galerie-animata";
 }
 #main-title #zona_proprie {
   grid-template-areas: "magazin magazin blog blog " "forum forum produse produse" "intrebari intrebari intrebari intrebari";

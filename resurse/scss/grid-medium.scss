@@ -5,11 +5,15 @@
         "calendar anunturi"
         "zona_proprie zona_proprie"
         "date_site date_site"
-        "utilizatori statistici";
+        "utilizatori statistici"
+        "galerie galerie";
     #zona_proprie {
         grid-template-areas:
             "magazin forum"
             "blog produse"
             "intrebari intrebari";
     }
+}
+#galerie-animata {
+    display: none;
 }

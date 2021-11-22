@@ -1,12 +1,11 @@
 #tabel_angajati {
   margin: 1em;
   border-collapse: collapse;
-  caption-side: bottom;
 }
 #tabel_angajati tr {
   background: var(--og_color_default_light);
 }
-#tabel_angajati tr:nth-child(2n + 2) {
+#tabel_angajati tr:nth-child(2n+2) {
   background: var(--color_default_light);
 }
 #tabel_angajati tr:hover {

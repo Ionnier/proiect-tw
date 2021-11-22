@@ -1,9 +1,1395 @@
 {
-    "cale_galerie": "/resurse/imagini",
+    "cale_galerie": "/resurse/imagini/galerie",
     "imagini": [
         {
-            "fisier": "cale_fisier",
-            "descriere": "asds"
+            "cale_fisier": "The Last of Us™ Part II_20200827104316.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827104316",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200827111353.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827111353",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200827111635.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827111635",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200827190526.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827190526",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200827192328.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827192328",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200827193607.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200827193607",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200828145433.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200828145433",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200828191129.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200828191129",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200828194121.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200828194121",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200830124745.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200830124745",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200830124752.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200830124752",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200907082619.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200907082619",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200907212314.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200907212314",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200907214622.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200907214622",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200909082453.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200909082453",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200909084655.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200909084655",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200926073700.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200926073700",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200926145748.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200926145748",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200926162103.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200926162103",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200927193243.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200927193243",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200927205331.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200927205331",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200929090044.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200929090044",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20200930172123.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20200930172123",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201002074421.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201002074421",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201002121739.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201002121739",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201003101452.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201003101452",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201003153239.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201003153239",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201003160813.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201003160813",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201003165432.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201003165432",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201003165432_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201003165432_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004122706.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004122706",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004122706_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004122706_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004131122.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004131122",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004131122_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004131122_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004140152.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004140152",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004140152_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004140152_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155053.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155053",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155053_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155053_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155338.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155338",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155338_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155338_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155343.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155343",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004155343_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004155343_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004161639.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004161639",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201004161639_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201004161639_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201016161114.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201016161114",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "The Last of Us™ Part II_20201016161114_1.webp",
+            "titlu": "The Last of Us™ Part II",
+            "text_descriere": "The Last of Us™ Part II_20201016161114_1",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930155716.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930155716",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930162659.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930162659",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930171309.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930171309",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930172518.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930172518",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930174105.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930174105",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930174152.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930174152",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930184446.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930184446",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930201525.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930201525",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930201605.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930201605",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930201641.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930201641",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20180930202035.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20180930202035",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181001202811.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181001202811",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181001210110.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181001210110",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181001210523.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181001210523",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181001214320.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181001214320",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181001220234.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181001220234",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181002141744.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181002141744",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181002193207.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181002193207",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181002195340.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181002195340",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181002201731.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181002201731",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181002203850.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181002203850",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181003144624.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181003144624",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181004143651.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181004143651",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181004202409.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181004202409",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181004202827.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181004202827",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181005153630.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181005153630",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181005161543.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181005161543",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181005162922.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181005162922",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006084751.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006084751",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006134848.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006134848",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006135430.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006135430",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006142542.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006142542",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006173120.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006173120",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006174306.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006174306",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006180214.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006180214",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181006220118.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181006220118",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007113733.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007113733",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007115403.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007115403",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007121336.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007121336",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007122929.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007122929",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007130916.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007130916",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007135111.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007135111",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007143059.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007143059",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007144908.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007144908",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007145356.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007145356",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007150303.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007150303",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007150435.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007150435",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007151625.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007151625",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007151631.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007151631",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007151729.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007151729",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007152130.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007152130",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007152247.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007152247",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007154707.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007154707",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "Marvel's Spider-Man_20181007154711.webp",
+            "titlu": "Marvel's Spider-Man",
+            "text_descriere": "Marvel's Spider-Man_20181007154711",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "SOTR 10.webp",
+            "titlu": "SOTR 10.webp",
+            "text_descriere": "SOTR 10",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 11.webp",
+            "titlu": "SOTR 11.webp",
+            "text_descriere": "SOTR 11",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 12.webp",
+            "titlu": "SOTR 12.webp",
+            "text_descriere": "SOTR 12",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 13.webp",
+            "titlu": "SOTR 13.webp",
+            "text_descriere": "SOTR 13",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 14.webp",
+            "titlu": "SOTR 14.webp",
+            "text_descriere": "SOTR 14",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 15.webp",
+            "titlu": "SOTR 15.webp",
+            "text_descriere": "SOTR 15",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 16.webp",
+            "titlu": "SOTR 16.webp",
+            "text_descriere": "SOTR 16",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 17.webp",
+            "titlu": "SOTR 17.webp",
+            "text_descriere": "SOTR 17",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 18.webp",
+            "titlu": "SOTR 18.webp",
+            "text_descriere": "SOTR 18",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 19.webp",
+            "titlu": "SOTR 19.webp",
+            "text_descriere": "SOTR 19",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 2.webp",
+            "titlu": "SOTR 2.webp",
+            "text_descriere": "SOTR 2",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 20.webp",
+            "titlu": "SOTR 20.webp",
+            "text_descriere": "SOTR 20",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 3.webp",
+            "titlu": "SOTR 3.webp",
+            "text_descriere": "SOTR 3",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 4.webp",
+            "titlu": "SOTR 4.webp",
+            "text_descriere": "SOTR 4",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 5.webp",
+            "titlu": "SOTR 5.webp",
+            "text_descriere": "SOTR 5",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 6.webp",
+            "titlu": "SOTR 6.webp",
+            "text_descriere": "SOTR 6",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 7.webp",
+            "titlu": "SOTR 7.webp",
+            "text_descriere": "SOTR 7",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 8.webp",
+            "titlu": "SOTR 8.webp",
+            "text_descriere": "SOTR 8",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "SOTR 9.webp",
+            "titlu": "SOTR 9.webp",
+            "text_descriere": "SOTR 9",
+            "anotimp": "toamna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 1.webp",
+            "titlu": "P5R 1.webp",
+            "text_descriere": "P5R 1",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 10.webp",
+            "titlu": "P5R 10.webp",
+            "text_descriere": "P5R 10",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 11.webp",
+            "titlu": "P5R 11.webp",
+            "text_descriere": "P5R 11",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 12.webp",
+            "titlu": "P5R 12.webp",
+            "text_descriere": "P5R 12",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 13.webp",
+            "titlu": "P5R 13.webp",
+            "text_descriere": "P5R 13",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 14.webp",
+            "titlu": "P5R 14.webp",
+            "text_descriere": "P5R 14",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 15.webp",
+            "titlu": "P5R 15.webp",
+            "text_descriere": "P5R 15",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 16.webp",
+            "titlu": "P5R 16.webp",
+            "text_descriere": "P5R 16",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 17.webp",
+            "titlu": "P5R 17.webp",
+            "text_descriere": "P5R 17",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 18.webp",
+            "titlu": "P5R 18.webp",
+            "text_descriere": "P5R 18",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 19.webp",
+            "titlu": "P5R 19.webp",
+            "text_descriere": "P5R 19",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 2.webp",
+            "titlu": "P5R 2.webp",
+            "text_descriere": "P5R 2",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 20.webp",
+            "titlu": "P5R 20.webp",
+            "text_descriere": "P5R 20",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 3.webp",
+            "titlu": "P5R 3.webp",
+            "text_descriere": "P5R 3",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 4.webp",
+            "titlu": "P5R 4.webp",
+            "text_descriere": "P5R 4",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 5.webp",
+            "titlu": "P5R 5.webp",
+            "text_descriere": "P5R 5",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 6.webp",
+            "titlu": "P5R 6.webp",
+            "text_descriere": "P5R 6",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 7.webp",
+            "titlu": "P5R 7.webp",
+            "text_descriere": "P5R 7",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 8.webp",
+            "titlu": "P5R 8.webp",
+            "text_descriere": "P5R 8",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "P5R 9.webp",
+            "titlu": "P5R 9.webp",
+            "text_descriere": "P5R 9",
+            "anotimp": "primavara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 1.webp",
+            "titlu": "GOT 1.webp",
+            "text_descriere": "GOT 1",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 10.webp",
+            "titlu": "GOT 10.webp",
+            "text_descriere": "GOT 10",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 11.webp",
+            "titlu": "GOT 11.webp",
+            "text_descriere": "GOT 11",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 12.webp",
+            "titlu": "GOT 12.webp",
+            "text_descriere": "GOT 12",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 13.webp",
+            "titlu": "GOT 13.webp",
+            "text_descriere": "GOT 13",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 14.webp",
+            "titlu": "GOT 14.webp",
+            "text_descriere": "GOT 14",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 15.webp",
+            "titlu": "GOT 15.webp",
+            "text_descriere": "GOT 15",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 16.webp",
+            "titlu": "GOT 16.webp",
+            "text_descriere": "GOT 16",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 17.webp",
+            "titlu": "GOT 17.webp",
+            "text_descriere": "GOT 17",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 18.webp",
+            "titlu": "GOT 18.webp",
+            "text_descriere": "GOT 18",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 19.webp",
+            "titlu": "GOT 19.webp",
+            "text_descriere": "GOT 19",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 2.webp",
+            "titlu": "GOT 2.webp",
+            "text_descriere": "GOT 2",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 20.webp",
+            "titlu": "GOT 20.webp",
+            "text_descriere": "GOT 20",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 3.webp",
+            "titlu": "GOT 3.webp",
+            "text_descriere": "GOT 3",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 4.webp",
+            "titlu": "GOT 4.webp",
+            "text_descriere": "GOT 4",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 5.webp",
+            "titlu": "GOT 5.webp",
+            "text_descriere": "GOT 5",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 6.webp",
+            "titlu": "GOT 6.webp",
+            "text_descriere": "GOT 6",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 7.webp",
+            "titlu": "GOT 7.webp",
+            "text_descriere": "GOT 7",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 8.webp",
+            "titlu": "GOT 8.webp",
+            "text_descriere": "GOT 8",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "GOT 9.webp",
+            "titlu": "GOT 9.webp",
+            "text_descriere": "GOT 9",
+            "anotimp": "vara",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 1.webp",
+            "titlu": "NA 1.webp",
+            "text_descriere": "NA 1",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 10.webp",
+            "titlu": "NA 10.webp",
+            "text_descriere": "NA 10",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 11.webp",
+            "titlu": "NA 11.webp",
+            "text_descriere": "NA 11",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 12.webp",
+            "titlu": "NA 12.webp",
+            "text_descriere": "NA 12",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 13.webp",
+            "titlu": "NA 13.webp",
+            "text_descriere": "NA 13",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 14.webp",
+            "titlu": "NA 14.webp",
+            "text_descriere": "NA 14",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 15.webp",
+            "titlu": "NA 15.webp",
+            "text_descriere": "NA 15",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 16.webp",
+            "titlu": "NA 16.webp",
+            "text_descriere": "NA 16",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 17.webp",
+            "titlu": "NA 17.webp",
+            "text_descriere": "NA 17",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 18.webp",
+            "titlu": "NA 18.webp",
+            "text_descriere": "NA 18",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 19.webp",
+            "titlu": "NA 19.webp",
+            "text_descriere": "NA 19",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 2.webp",
+            "titlu": "NA 2.webp",
+            "text_descriere": "NA 2",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 20.webp",
+            "titlu": "NA 20.webp",
+            "text_descriere": "NA 20",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 3.webp",
+            "titlu": "NA 3.webp",
+            "text_descriere": "NA 3",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 4.webp",
+            "titlu": "NA 4.webp",
+            "text_descriere": "NA 4",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 5.webp",
+            "titlu": "NA 5.webp",
+            "text_descriere": "NA 5",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 6.webp",
+            "titlu": "NA 6.webp",
+            "text_descriere": "NA 6",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 7.webp",
+            "titlu": "NA 7.webp",
+            "text_descriere": "NA 7",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 8.webp",
+            "titlu": "NA 8.webp",
+            "text_descriere": "NA 8",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
+        },
+        {
+            "cale_fisier": "NA 9.webp",
+            "titlu": "NA 9.webp",
+            "text_descriere": "NA 9",
+            "anotimp": "iarna",
+            "copyright": {
+                "link": "https://psnprofiles.com/ChibiiiFox",
+                "name": "ChibiiiFox"
+            }
         }
     ]
 }

@@ -13,6 +13,8 @@
 #utilizatori,
 #statistici,
 footer,
+#galerie,
+#galerie-animata,
 #zona_proprie h2 {
   padding: 10px;
   background-color: var(--color_default_light);
@@ -75,6 +77,12 @@ footer {
 }
 #main-title #statistici {
   grid-area: statistici;
+}
+#main-title #galerie {
+  grid-area: galerie;
+}
+#main-title #galerie-animata {
+  grid-area: galerie-animata;
 }
 
 /*# sourceMappingURL=grid-default.css.map */

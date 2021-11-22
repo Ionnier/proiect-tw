@@ -16,6 +16,8 @@ $section_radius: 50px 50px 50px 50px;
 #utilizatori,
 #statistici,
 footer,
+#galerie,
+#galerie-animata,
 #zona_proprie h2 {
     padding: 10px;
     background-color: var(--color_default_light);
@@ -76,5 +78,11 @@ footer {
     }
     #statistici {
         grid-area: statistici;
+    }
+    #galerie {
+        grid-area: galerie;
+    }
+    #galerie-animata {
+        grid-area: galerie-animata;
     }
 }

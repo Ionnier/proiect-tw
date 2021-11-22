@@ -1,8 +1,12 @@
 #main-title {
-  grid-template-areas: "intro intro" "tabel tabel" "calendar anunturi" "zona_proprie zona_proprie" "date_site date_site" "utilizatori statistici";
+  grid-template-areas: "intro intro" "tabel tabel" "calendar anunturi" "zona_proprie zona_proprie" "date_site date_site" "utilizatori statistici" "galerie galerie";
 }
 #main-title #zona_proprie {
   grid-template-areas: "magazin forum" "blog produse" "intrebari intrebari";
+}
+
+#galerie-animata {
+  display: none;
 }
 
 /*# sourceMappingURL=grid-medium.css.map */
