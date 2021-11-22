@@ -4,7 +4,6 @@ $transformare_f: skewX(90deg) !default;
 $setare-server: black !default;
 
 #galerie-animata {
-	width: 97%;
 	display: block;
 	margin: auto;
 	overflow: hidden;
@@ -122,8 +121,11 @@ x%........3s
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 	#galerie-animata {
 		display: none;
+	}
+	.galerie-a {
+		margin-bottom: 0rem;
 	}
 }
