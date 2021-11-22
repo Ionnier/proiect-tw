@@ -1,0 +1,17 @@
+<div id="galerie">
+    <% for (let imag of locals.imagini){%>
+        <figure>
+            <picture>
+                <source srcset="<%-imag.mic %>" media="(max-width:600px)" />
+                <img src="<%- locals.cale+'/'+imag.cale_fisier%>" alt="<%- imag.alt||imag.titlu%>">
+            </picture>
+            <figcaption>
+                <%- imag.text_descriere %>
+            </figcaption>
+            <% if(imag.copyright){ %>
+                <a href=<%-imag.copyright.link%>> <%-imag.copyright.name %> </a>
+                <%} %>
+        </figure>
+
+        <% } %>
+</div>

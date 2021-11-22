@@ -1,0 +1,13 @@
+<div id="galerie-animata" class="galerie-a">
+    <%for (let imag of locals.imagini_animate){ %>
+        <figure>
+            <picture>
+                <source srcset="<%-imag.mic %>" media="(max-width:700px)" />
+                <img src="<%- locals.cale+'/'+imag.cale_fisier%>" alt="<%- imag.titlu%>">
+            </picture>
+            <figcaption>
+                <%- imag.text_descriere %>
+            </figcaption>
+        </figure>
+        <%}%>
+</div>

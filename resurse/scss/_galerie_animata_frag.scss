@@ -1,0 +1,129 @@
+@use "sass:math";
+$transformare_i: skewX(0deg) !default;
+$transformare_f: skewX(90deg) !default;
+$setare-server: black !default;
+
+#galerie-animata {
+	width: 97%;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+.galerie-a {
+	display: center;
+	width: 500px;
+	height: 500px;
+	border: 100px inset $setare-server;
+	border-style: solid;
+	border-image: url("/resurse/imagini/border.png");
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 5rem;
+}
+.galerie-a figcaption {
+	position: absolute;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.7);
+	width: 100%;
+	text-align: center;
+}
+.galerie-a figure {
+	position: relative;
+	width: 400px;
+	height: 300px;
+}
+
+$nr_poze: 13 !default;
+$duratie_animatie: 3s;
+$duratie_totala: $nr_poze * $duratie_animatie;
+
+$hideat: math.div($duratie-animatie, $duratie-totala) * 100;
+$showat: 100-$hideat;
+
+#galerie-animata figure {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	animation-name: gal_exemplu;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-duration: $duratie_totala;
+	transform-origin: center center;
+	opacity: 0.1;
+	&:hover {
+		animation-play-state: paused;
+		-webkit-animation-play-state: paused;
+		-moz-animation-play-state: paused;
+		-o-animation-play-state: paused;
+		animation-play-state: paused;
+	}
+}
+
+#galerie-animata:hover figure {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+@for $i from 1 through $nr_poze {
+	#galerie-animata figure:nth-of-type(#{$nr_poze - $i + 1}) {
+		animation-delay: #{($i - 1) * $duratie_animatie};
+	}
+}
+/*cum calculam timpii:
+- avem 7 poze; vrem pentru fiecare un timp de afisare de 1.5 secunde si o trecere spre urmatoarea poza de 1.5 secunde
+- rezulta 3 secunde pentru fiecare imagine
+- 7imagini * 3secunde =21 secunde in total pentru animatie (animation-duration) si fiecare poza cu un delay = 3* numarul de ordine
+- momentul in care trebuie ascunsa poza si pusa in spatele celorlalte (ca sa isi astepte randul pentru noua animatie:
+il calculam cu formula  timp_afisare(normal+trecerea la urmatoarea poza)/timp_total*100 = 3/21*100 =  14.285714(aproximativ)
+100%..... 21s
+x%........3s
+
+- calculam 100-14.285714=85.714286 - la acest moment imaginea trebuie sa se vada in spatele imaginii care se afiseaza in mod curent (ca sa se vada si cat timp se realizeaza efectul de schimbare a imaginii
+*/
+
+@keyframes gal_exemplu {
+	0% {
+		transform: translateX(0px);
+		z-index: 10;
+		opacity: 1;
+	}
+	#{math.div($hideat, 4) + "%"} {
+		transform: translateX(0px);
+	}
+
+	#{math.div($hideat, 2) + "%"} {
+		transform: translateX(200px);
+	}
+	#{math.div(3 * $hideat, 4) + "%"} {
+		transform: translateX(-200px);
+	}
+	#{($hideat*1) + "%"} {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	#{(100-$hideat) + "%"} {
+		transform: translateX(0px);
+		opacity: 0;
+		z-index: -10;
+	}
+	#{(100-$hideat + 0.00001) + "%"} {
+		z-index: 0;
+	}
+	100% {
+		opacity: 1;
+		z-index: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#galerie-animata {
+		display: none;
+	}
+}

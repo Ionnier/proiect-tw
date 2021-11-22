@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Produse</title>
+    <%- include("../fragmente/head.ejs") %>
+    <style>
+        #product-list{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <section class="text-container">
+                <h2>Produse</h2>
+            <div id="product-list">
+                <% for(let pr of locals.produse){ %>
+                    <article>
+                        <h3><%- pr.nume %></h3>
+                        <p><%- pr.categorie %></p>
+                        <div>
+                            <p><%- pr.descriere %></p>
+                            <img src="<%- pr.img %>" alt="img-produs" />
+                        </div>
+                        <ul>
+                            <li>
+                                <%- pr.pret %>
+                            </li>
+                            <li>
+                                <%- pr.greutate %>
+                            </li>
+                            <li>
+                                Compatibilitate
+                            </li>
+                            <li>
+                                <time datetime="<2018-09-15>">Sambata, 15-Septembrie-2018</time>
+                            </li>
+                            <li>
+                                Exclusiv Online
+                            </li>
+                        </ul>
+                    </article>
+                    <% } %>
+
+
+            </div>
+            
+
+            </section>
+
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+
+</body>
+
+</html>
+

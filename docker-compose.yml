@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:14.0
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgresspa55
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+volumes:
+  pgdata:
