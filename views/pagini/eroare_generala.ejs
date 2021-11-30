@@ -27,7 +27,7 @@
                 </h2>
 
                 <img src="<%-locals.image%>" alt="Error message">
-                <% if(err.stack){ %>
+                <% if ((err) && (err.stack)){ %>
                     <hr>
 
                     <p>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>
+        <%- locals.produs.nume %>
+    </title>
+    <%- include("../fragmente/head.ejs") %>
+        <style>
+            .descimg {
+                display: flex;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+
+            <section class="text-container">
+
+                <h3>
+                    <%- locals.produs.nume %>
+                </h3>
+                <span id="idprodus"> Cod produs: <%- `articol_${locals.produs.id}` %> </span>
+                <div class="descimg">
+                    <p>
+                        <%- locals.produs.descriere %>
+                    </p>
+                    <img src="<%- locals.produs.img %>" alt="<%- locals.nume_produs %> imagine" />
+
+                </div>
+
+                <ul>
+                    <li>
+                        Pret: <%- produs.pret %>
+                    </li>
+                    <li>
+                        Greutate: <%- locals.produs.greutate %>
+                    </li>
+                    <li>
+                        Tip Produs: <%- locals.produs.tip_produs %>
+                    </li>
+                    <li>
+                        Categorie: <%- locals.produs.categorie %>
+                    </li>
+                    <li>
+                        Public Tinta: <%- locals.produs.public_tinta %>
+                    </li>
+                    <li>
+                        Compatibilitate cu:
+                        <ul>
+                            <%for( let el of locals.produs.compatibilitate) {%>
+                                <li class="platforma">
+                                    <%- el %>
+                                </li>
+                                <%}%>
+                        </ul>
+                    </li>
+                    <li>
+                        Lansat la: <time datetime="<%- locals.produs.data_lansare.toISOString().split(" T")[0] %>"> <%-
+                                locals.produs.data_lansare.toUTCString() %></time>
+                    </li>
+                    <li>
+                        Exclusiv Online: <%- produs.doar_online %>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+
+</body>
+
+</html>

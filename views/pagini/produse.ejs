@@ -4,12 +4,47 @@
 <head>
     <title>Produse</title>
     <%- include("../fragmente/head.ejs") %>
-    <style>
-        #product-list{
-            display: grid;
-            grid-template-columns: auto auto auto;
-        }
-    </style>
+        <script type="text/javascript" src=/resurse/scripts/produse.js></script>
+        <style>
+            a {
+                text-decoration: none;
+                color: default;
+            }
+
+            #product-list {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .descimg {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            .descimg p {
+                display: inline-block;
+            }
+
+            @media screen and (min-width:500px) and (max-width:900px) {
+                #product-list {
+                    grid-template-columns: auto auto;
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                #product-list {
+                    grid-template-columns: auto;
+                }
+            }
+
+            h3 {
+                text-align: center;
+            }
+        </style>
 
 </head>
 
@@ -18,38 +53,113 @@
         <main>
             <section class="text-container">
                 <h2>Produse</h2>
-            <div id="product-list">
-                <% for(let pr of locals.produse){ %>
-                    <article>
-                        <h3><%- pr.nume %></h3>
-                        <p><%- pr.categorie %></p>
-                        <div>
-                            <p><%- pr.descriere %></p>
-                            <img src="<%- pr.img %>" alt="img-produs" />
-                        </div>
-                        <ul>
-                            <li>
-                                <%- pr.pret %>
-                            </li>
-                            <li>
-                                <%- pr.greutate %>
-                            </li>
-                            <li>
-                                Compatibilitate
-                            </li>
-                            <li>
-                                <time datetime="<2018-09-15>">Sambata, 15-Septembrie-2018</time>
-                            </li>
-                            <li>
-                                Exclusiv Online
-                            </li>
-                        </ul>
-                    </article>
-                    <% } %>
+
+                <label> Nume: <input type="text" id="inp-nume"></label>
+                <!--<label> Maxim calorii: <input type="number" id="inp-calorii" value="10000"></label>-->
+                <div> Greutate:
+                    <!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+                    <label>Usor (greutate &lt; <span class="greutate-usor"> 150 </span>)
+                        <input id="i_rad1" name="gr_rad" value="1" type="radio" />
+                    </label>
+                    <label>Mediu (<span class="greutate-usor">150</span> &le; greutate &lt; <span
+                            class="greutate-mediu">350</span>)
+                        <input id="i_rad2" name="gr_rad" value="2" type="radio" />
+                    </label>
+                    <!-- <label>Ridicat caloric (700 &le; calorii)
+                <input id="i_rad3" name="gr_rad" value="3" type="radio"/>
+            </label> -->
+                    <label>Toate
+                        <input id="i_rad4" checked name="gr_rad" value="4" type="radio" />
+                    </label>
+                </div>
+
+                <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0" max="70"> <span
+                        id="infoRange">(0)</span></label>
+                <p>
+                    <label for="tags">Cuvinte cheie descriere(+tag -tag):
+                        <textarea id="tags" name="tags" style="width:60%;"></textarea>
+                    </label>
+
+                <p>
+                    <label>Select simplu:
+                        <select id="inp-categorie">
+                            <option id="sel-toate" selected value="toate">toate</option>
+                            <% for (let opt of locals.optiuni) { %>
+                                <option value="<%- opt %>">
+                                    <%- opt %>
+                                </option>
+                                <% } %>
+                        </select>
+                    </label>
+                <p>
+                    <label>Select multiplu:
+                        <select id="i_sel_multiplu" multiple size="4">
+                        </select>
+                    </label>
+                <p>
+                    <button id="filtrare">Filtreaza</button> <button id="resetare">Reseteaza</button><br />
+                    <button id="sortCrescNume">Sorteaza crescator dupa nume si pret</button>
+                    <button id="sortDescrescNume">Sorteaza descrescator dupa nume si pret</button>
+
+                </p>
+
+                <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+                <div id="product-list">
+                    <% for(let pr of locals.produse){ %>
+
+                        <article class="produs">
+                            <a href="<%- `/produs/articol_${pr.id}` %>">
+                                <h3 class="nume">
+                                    <%- pr.nume %>
+                                </h3>
+                                <p class="val-categorie">
+                                    <%- pr.tip_produs %>
+                                </p>
+                                <div class="descimg">
+                                    <p class="descriere">
+                                        <%- pr.descriere %>
+                                    </p>
+                                    <img src="<%- pr.img %>" alt="img-produs" />
+                                </div>
+                                <ul>
+                                    <li class="pret"> Pret: <span class="val-pret">
+                                            <%- pr.pret%>
+                                        </span></li>
+                                    <li class="greutate"> Greutate: <span class="val-greutate">
+                                            <%- pr.greutate%>
+                                        </span>
+                                    </li>
+                                    <li class="compatibilitate"> Compatibilitate:
+                                        <ul>
+                                            <%for( let el of pr.compatibilitate) {%>
+                                                <li class="platforma">
+                                                    <%- el %>
+                                                </li>
+                                                <%}%>
+                                        </ul>
+                                    <li>
+                                        <% if(pr.doar_online){ %>
+                                            <p>Exclusiv Online</p>
+                                            <% }else{ %>
+                                                <p>Se poate gasi in magazin</p>
+                                                <%} %>
+                                    </li>
+                                    <li class="lansare"> Data Lansare: <span class="data-lansare">
+                                            <%- pr.data_lansare.toLocaleString('en-US')%>
+                                        </span></li>
+                                </ul>
+                            </a>
+                            <label class="selecteaza-cos">
+                                Selectează:<br />
+                                <input style="display: block; width: 100%;" type="checkbox" class="select-cos"
+                                    value="<%-pr.id %>" autocomplete="off">
+                            </label>
+                        </article>
+                        <% } %>
 
 
-            </div>
-            
+                </div>
+
 
             </section>
 
@@ -59,4 +169,3 @@
 </body>
 
 </html>
-

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Forum</title>
+    <%- include("../fragmente/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <div class="text-container">
+                <h2>Forum</h2>
+                <div class="div-postari">
+                    <%for(let postare of postari){ %>
+                        <article style="border: 5px solid black; margin: 15px; padding:15px; overflow: auto;"
+                            class="postare">
+                            <a href="/forum/<%- postare.id%>">
+                                <h3 style="color: black; text-decoration: none;">
+                                    <%- postare.titlu %>
+                                </h3>
+                                <p>Comentarii: <%- postare.nr_comentarii%>
+                                </p>
+                                <p>Publicat la: <%- postare.data.toUTCString() %>
+                                </p>
+                            </a>
+                        </article>
+                        <%}%>
+                </div>
+
+                <label> Titlu: <input type="text" id="inp-titlu"></label>
+                <p></p>
+                <label>Scrie o intrare in forum:
+                    <div id="editor"></div>
+                </label>
+                <br>
+                <button id="posteaza">Posteaza</button>
+
+            </div>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+</body>
+<script src="/resurse/ckeditor5-build-classic/ckeditor.js"></script>
+
+
+<script>
+    let editor
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(newEditor => {
+            editor = newEditor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    var btn = document.getElementById("posteaza");
+    btn.onclick = async function () {
+        let title = document.getElementById("inp-titlu").value.trim()
+        let continut = editor.getData().trim()
+        if (continut.length > 25 && title.length > 5) {
+            try {
+                const body = Object.assign({ title, continut });
+                console.log(JSON.stringify(body))
+                const result = await fetch('/api/v1/postari/', {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(body)
+                })
+                console.log(result)
+                const json = await result.json();
+                console.log(json);
+                if (json.success === "true") {
+                    window.location.href = `/forum/${json.id_postare}`;
+                }
+            }
+            catch (error) {
+                alert(error);
+            }
+        } else {
+            var eroare_tags;
+            eroare_tags = document.getElementById("eroare_tags");
+            if (!eroare_tags) {
+                eroare_tags = document.createElement("eroare_tags");
+                eroare_tags.innerHTML = "<br>O postare trebuie sa aiba minim 25 de caractere si un titlu de 5 de caractere";//<span> Suma:...
+                eroare_tags.id = "eroare_tags";//<span id="..."
+                document.getElementById("text_comentariu").insertAdjacentElement("afterend", eroare_tags);
+                setTimeout(function () { document.getElementById("eroare_tags").remove() }, 2000);
+            }
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>
+        <%- locals.postare.titlu %>
+    </title>
+    <%- include("../fragmente/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <section class="text-container">
+                <h3>
+                    <%- locals.postare.titlu %>
+                </h3>
+                <p> de <%- locals.postare.user || "Guest" %> la <%- locals.postare.data_publicare.toUTCString()%>
+                </p>
+                <p style="width: 100%;">
+                    <%- locals.postare.continut %>
+                </p>
+                <br>
+                <p>Comentarii: <%- comentarii.length %>
+                </p>
+                <% for(let comentariu of comentarii){ %>
+                    <div class="comentariu" style="border: 1px solid black; margin: 10px; ">
+                        <article>
+                            <%- comentariu.continut %>
+                        </article>
+                        <span>
+                            <%- comentariu.user || "Guest" %> la <%- comentariu.data_publicare.toLocaleString("en-US",
+                                    {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }) %>
+                                    <% console.log(comentariu.data_publicare.toLocaleString(Intl.DateTimeFormat().resolvedOptions().locale,
+                                        {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone })) %>
+                                        <% console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)%>
+                        </span>
+                    </div>
+                    <%} %>
+                        <label>Lasa un comentariu:
+                            <div id="editor"></div>
+                        </label>
+
+                        <br>
+                        <button id="posteaza">Posteaza</button>
+
+
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+</body>
+<script src="/resurse/ckeditor5-build-classic/ckeditor.js"></script>
+<script>
+    let editor
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            toolbar: ['bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+            heading: {
+                options: [
+                    { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                ]
+            }
+        })
+        .then(newEditor => {
+            editor = newEditor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    url = window.location.href.split("/")
+    var id = url[url.length - 1];
+    var btn = document.getElementById("posteaza");
+    btn.onclick = async function () {
+        let continut = editor.getData().trim()
+        if (continut.length > 0) {
+            try {
+                const body = Object.assign({ id, continut });
+                const result = await fetch('/api/v1/comentarii', {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(body)
+                })
+                const json = await result.json();
+                if (json.success === "true") {
+                    window.location.href = `/forum/${id}`;
+                }
+            }
+            catch (error) {
+                alert(error);
+            }
+        } else {
+            var eroare_tags;
+            eroare_tags = document.getElementById("eroare_tags");
+            if (!eroare_tags) {
+                eroare_tags = document.createElement("eroare_tags");
+                eroare_tags.innerHTML = "<br>Comentariul nu poate fi gol";//<span> Suma:...
+                eroare_tags.id = "eroare_tags";//<span id="..."
+                document.getElementById("text_comentariu").insertAdjacentElement("afterend", eroare_tags);
+                setTimeout(function () { document.getElementById("eroare_tags").remove() }, 2000);
+            }
+        }
+    }
+</script>
+
+
+</html>

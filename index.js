@@ -1,21 +1,16 @@
 require('dotenv').config()
 const express = require('express');
-const { Client } = require('pg');
 const fs = require('fs')
 const path = require('path')
 const sharp = require('sharp')
 const sass = require('sass')
-const ejs = require('ejs')
-if (!fs.existsSync(path.join(__dirname,"temp"))){
-    fs.mkdirSync(path.join(__dirname,"temp"));
+const ejs = require('ejs');
+var cors = require('cors')
+
+if (!fs.existsSync(path.join(__dirname, "temp"))) {
+    fs.mkdirSync(path.join(__dirname, "temp"));
 }
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false
-      }
-})
-client.connect()
+const client = require('./db').db
 client.query("select enum_range(null::categorii_produse)", (err, res) => {
     if (err) {
         console.log(err)
@@ -30,15 +25,19 @@ client.query("select enum_range(null::categorii_produse)", (err, res) => {
         header = fs.readFileSync(path.join(__dirname, "views", "fragmente", "header_template.ejs")).toString("utf-8")
         to_add = ""
         for (categorie of categories) {
-            to_add += `<li><a href="${categorie}"> ${categorie} </a> </li>\n`
+            to_add += `<li><a href="/produse/${categorie.toLowerCase().replace(" ", "-")}"> ${categorie} </a> </li>\n`
         }
-        header = header.replace("%$!@#$LISTA_PRODUSE%!@#$%@", to_add)
+        header = header.replace("<!--%$!@#$LISTA_PRODUSE%!@#$%@!-->", to_add)
         fs.writeFileSync(path.join(__dirname, "views", "fragmente", "header.ejs"), header)
         console.log(categories)
     }
 })
 app = express();
-
+app.use(cors())
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
 app.use("/resurse", express.static(__dirname + "/resurse"))
 app.set("view engine", "ejs")
 
@@ -127,13 +126,50 @@ app.get("/galerie", (req, res) => {
     })
 })
 
-app.get("/produse", (req, res) => {
-    client.query("select * from produs", (err, data) => {
+app.get("/produs/:id/", (req, res) => {
+    if (req.params.id && req.params.id.split("_").length == 2 && req.params.id.split("_")[0] == "articol") {
+        req.params.id = req.params.id.split("_")[1]
+        client.query("select * from Produse where id = $1", [req.params.id], (err, data) => {
+            if (err) {
+                res.status(418).render("pagini/eroare_generala", { statuscode: 418, image: "/resurse/imagini/error.png", err: err })
+                return;
+            } else {
+                if (data.rows.length == 1) {
+                    res.render("pagini/pag_produs", { produs: data.rows[0] })
+                    return;
+                }
+                else {
+                    res.status(418).render("pagini/eroare_generala", { statuscode: 418, image: "/resurse/imagini/error.png", err: err })
+                    return;
+                }
+            }
+        })
+    }
+    else {
+        res.status(404).render("pagini/eroare_generala", { statuscode: 404, image: "/resurse/imagini/404.png", err: new Error("Failed to lookup view") })
+        return;
+    }
+})
+
+app.get(["/produse", "/produse/:categorie/"], (req, res) => {
+    query = "select * from Produse where 1 = 1 "
+    args = []
+    if (!(req.params.categorie == 'toate' || req.params.categorie == undefined)) {
+        query += "and replace(lower(categorie::varchar),' ','-') = $1"
+        args.push(req.params.categorie)
+    }
+    client.query(query, args, (err, data) => {
         if (err) {
             console.log(err)
         } else {
-            console.log(data)
-            res.render("pagini/produse", { produse: data.rows })
+            v_optiuni = []
+            for (let row of data.rows) {
+                if (!(row.tip_produs in v_optiuni)) {
+                    v_optiuni.push(row.tip_produs)
+                }
+            }
+            v_optiuni = new Set(v_optiuni)
+            res.render("pagini/produse", { produse: data.rows, optiuni: v_optiuni })
         }
     })
 })
@@ -151,6 +187,43 @@ app.get("/*.ejs", (req, res) => {
     res.status(403).render("pagini/eroare_generala", { statuscode: 403, image: "/resurse/imagini/403.png", err: new Error("Forbidden") })
 })
 
+app.use("/api/v1/postari", require("./routers/postariRouter"))
+app.use("/api/v1/comentarii/", require("./routers/comentariiRouter"))
+
+app.get("/forum", (req, res) => {
+    client.query("SELECT * from lista_postari", (err, data) => {
+        if (err) {
+            console.log(err)
+            res.status(418).render("pagini/eroare_generala", { statuscode: 418, image: "/resurse/imagini/418.png", err: err })
+            return;
+        } else {
+            res.render("pagini/forum", { postari: data.rows })
+            return;
+        }
+    })
+})
+
+app.get("/forum/:id/", (req, res) => {
+    client.query("SELECT * from postari where id_postare=$1", [req.params.id], (err, data) => {
+        if (err) {
+            console.log(err)
+            res.status(418).render("pagini/eroare_generala", { statuscode: 418, image: "/resurse/imagini/418.png", err: err })
+            return;
+        } else {
+            client.query("SELECT * from comentarii where id_postare=$1 order by data_publicare desc", [req.params.id], (err, data2) => {
+                if (err) {
+                    res.status(418).render("pagini/eroare_generala", { statuscode: 418, image: "/resurse/imagini/418.png", err: err })
+                    return;
+                } else {
+                    res.render("pagini/postare", { postare: data.rows[0], comentarii: data2.rows })
+                    return;
+                }
+            })
+        }
+    })
+})
+
+
 app.get("/*", (req, res) => {
     res.render(`pagini${req.url}`, (err, rezultatRender) => {
         if (err) {
@@ -163,6 +236,27 @@ app.get("/*", (req, res) => {
         res.send(rezultatRender);
     });
 });
+
+fs.readdir(path.join(__dirname, "resurse", "imagini", "produse"), (err, files) => {
+    for (file of files) {
+        og = file
+        if (file.split(".").pop() != "webp") {
+            sharp(path.join(__dirname, "resurse", "imagini", "produse", file)).resize(200).toFile(path.join(__dirname, "resurse", "imagini", "produse", `${file.split(".")[0]}.webp`)).then((res, err) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    null;
+                    // fs.unlink(path.join(__dirname, "resurse", "imagini", "produse", og), (err) => {
+                    //     console.log(path.join(__dirname, "resurse", "imagini", "produse", file))
+                    //     if (err) {
+                    //         console.log(err)
+                    //     }
+                    // })
+                }
+            })
+        }
+    }
+})
 
 // cale = path.join("C:", "Users", "Dragos", "Desktop", "tlou2")
 // //cale = path.join("C:", "Users", "Dragos", "Downloads", "Seasons", "Seasons", "Winter - Nier Automata")

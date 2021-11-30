@@ -53,7 +53,7 @@ $showat: 100-$hideat;
 	animation-duration: $duratie_totala;
 	transform-origin: center center;
 	opacity: 0.1;
-	&:hover {
+	&:hover{
 		animation-play-state: paused;
 		-webkit-animation-play-state: paused;
 		-moz-animation-play-state: paused;
