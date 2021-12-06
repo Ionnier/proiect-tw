@@ -10,13 +10,14 @@ $setare-server: black !default;
 	margin-left: auto;
 	margin-right: auto;
 }
+#galerie-animata figure {
+	border-style: solid;
+	border-image: url("/resurse/imagini/border.png") 100 round;
+}
 .galerie-a {
 	display: center;
 	width: 500px;
 	height: 500px;
-	border: 100px inset $setare-server;
-	border-style: solid;
-	border-image: url("/resurse/imagini/border.png");
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 5rem;
@@ -53,7 +54,7 @@ $showat: 100-$hideat;
 	animation-duration: $duratie_totala;
 	transform-origin: center center;
 	opacity: 0.1;
-	&:hover{
+	&:hover {
 		animation-play-state: paused;
 		-webkit-animation-play-state: paused;
 		-moz-animation-play-state: paused;

@@ -100,8 +100,18 @@
                     <button id="filtrare">Filtreaza</button> <button id="resetare">Reseteaza</button><br />
                     <button id="sortCrescNume">Sorteaza crescator dupa nume si pret</button>
                     <button id="sortDescrescNume">Sorteaza descrescator dupa nume si pret</button>
-
                 </p>
+                <label>
+                    Disponibilitate:
+                    <label>
+                        Doar Online
+                        <input class="chckbox" type="checkbox" id="onlinechk" name="online" value="1" checked>
+                    </label>
+                    <label>
+                        In magazine
+                        <input class="chckbox" type="checkbox" id="magazinchk" name="magazin" value="2" checked>
+                    </label>
+                </label>
 
                 <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
                 <div id="product-list">
@@ -139,9 +149,9 @@
                                         </ul>
                                     <li>
                                         <% if(pr.doar_online){ %>
-                                            <p>Exclusiv Online</p>
+                                            <p class="locatie">Exclusiv Online</p>
                                             <% }else{ %>
-                                                <p>Se poate gasi in magazin</p>
+                                                <p class="locatie">Se poate gasi in magazin</p>
                                                 <%} %>
                                     </li>
                                     <li class="lansare"> Data Lansare: <span class="data-lansare">

@@ -16,6 +16,9 @@
 #galerie figure:hover a {
   display: block;
 }
+#galerie figure:hover img {
+  border-radius: 25px;
+}
 #galerie:hover figure {
   opacity: 0.25;
 }
@@ -35,11 +38,11 @@
   }
 }
 @media screen and (min-width: 501px) and (max-width: 900px) {
-  #galerie figure:nth-child(2n + 1) {
+  #galerie figure:nth-child(2n+1) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  #galerie figure:nth-child(2n + 2) {
+  #galerie figure:nth-child(2n+2) {
     grid-column-start: 2;
     grid-column-end: 3;
   }
@@ -49,23 +52,23 @@
     padding: 0px 100px 100px 100px;
     align-self: center;
   }
-  #galerie figure:nth-child(5n + 1) {
+  #galerie figure:nth-child(5n+1) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  #galerie figure:nth-child(5n + 2) {
+  #galerie figure:nth-child(5n+2) {
     grid-column-start: 2;
     grid-column-end: 3;
   }
-  #galerie figure:nth-child(5n + 3) {
+  #galerie figure:nth-child(5n+3) {
     grid-column-start: 3;
     grid-column-end: 4;
   }
-  #galerie figure:nth-child(5n + 4) {
+  #galerie figure:nth-child(5n+4) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  #galerie figure:nth-child(5n + 5) {
+  #galerie figure:nth-child(5n+5) {
     grid-column-start: 3;
     grid-column-end: 4;
   }

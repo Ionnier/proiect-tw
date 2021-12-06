@@ -14,7 +14,11 @@
         a {
             display: block;
         }
+        img {
+            border-radius: 25px;
+        }
     }
+
     &:hover {
         figure {
             opacity: 0.25;
