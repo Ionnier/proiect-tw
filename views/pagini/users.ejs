@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Utilizatori</title>
+    <%- include("../fragmente/head.ejs") %>
+</head>
+
+<script>
+    async function deleteUser(id) {
+        try {
+            const result = await fetch(`/api/v1/users/${id}`, {
+                method: "DELETE",
+                headers: { "Content-Type": "text/plain" },
+            })
+            const json = await result.json();
+            if (json.success === "true") {
+                window.location.href = `/users`;
+            }
+        }
+        catch (error) {
+            alert(error);
+        }
+    }
+</script>
+
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <section class="text-container">
+
+                <table>
+                    <tr>
+                        <% for (x of locals.fields){ if(x!="id" ){%>
+                            <th>
+                                <%- x.replace(/^\w/, c=> c.toUpperCase()); %>
+                            </th>
+                            <% }} %>
+                    </tr>
+                    <% for(x of locals.users){ %>
+                        <tr>
+                            <% for( [key, y] of Object.entries(x)){ if(key!="id" ){%>
+                                <td>
+                                    <%- y %>
+                                </td>
+                                <%}} %>
+                                    <td>
+                                        <button onclick="deleteUser(<%- x.id %>)">Sterge-ma</button>
+                                    </td>
+                        </tr>
+                        <% } %>
+                </table>
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+</body>
+
+
+</html>

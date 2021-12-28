@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Resetare parola</title>
+    <%- include("../fragmente/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+            <section class="text-container">
+                <% if ((locals.err=="" || locals.err==undefined) && locals.raspuns==undefined ){ %>
+                    <form id="form_inreg" method="post" class="date" action="/resetareparola"
+                        enctype="multipart/form-data">
+                        <p>
+                            <label>
+                                Username: <input type="text" name="username"
+                                    placeholder="prof<%=Math.floor(Math.random(1000000)) %>" required
+                                    pattern="[A-Za-z0-9]+">
+                            </label>
+                        </p>
+                        <p>
+                            <!-- prezentare -->
+                            <label>
+                                Parola: <input id="parl" type="password" name="parola" required value="">
+                            </label>
+                            <!--pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])" -->
+                        </p>
+                        <p>
+                            <label>
+                                Reintroduceti parola: <input id="rparl" type="password" name="rparl" required value="">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Token: <input type="text" name="token" required>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="submit" value="Trimite">
+                            <input type="reset" value="Reseteaza">
+                        </p>
+                    </form>
+                    <%} else {%>
+                        <p style="color: red;">
+                            <%- locals.err %>
+                        </p>
+                        <%}%>
+                            <% if(locals.raspuns){ %>
+                                <p style="color: green;">
+                                    <%- locals.raspuns %>
+                                </p>
+                                <% } %>
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+            <script>
+                window.onload = function () {
+                    let urlParams = new URLSearchParams(window.location.search);
+                    for (elem of document.getElementsByTagName('input')) {
+                        if (elem.name == "token" && urlParams.has('token')) {
+                            elem.value = urlParams.get('token')
+                            break
+                        }
+                    }
+                    if (document.getElementById("form_inreg")) {
+                        document.getElementById("form_inreg").onsubmit = function () {
+                            if (document.getElementById("parl").value == document.getElementById("rparl").value) {
+                                return true
+                            }
+                            var spanSuma;
+                            spanSuma = document.getElementById("numar-suma");
+                            if (!spanSuma) {
+                                spanSuma = document.createElement("span");
+                                spanSuma.innerHTML = "Ati introdus parola gresit!";
+                                spanSuma.id = "numar-suma";//<span id="..."
+                                document.getElementsByClassName("text-container")[0].appendChild(spanSuma);
+                                setTimeout(function () { document.getElementById("numar-suma").remove() }, 5000);
+                                return false
+                            }
+                            return false
+                        }
+                    }
+                }
+            </script>
+</body>
+
+</html>

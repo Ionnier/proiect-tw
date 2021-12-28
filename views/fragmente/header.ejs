@@ -18,29 +18,259 @@
                 <li><a href="/#intrebari">Intrebari frecvente</a></li>
             </ul>
         </li>
-        <li>
-            <a href="/istoric"> <span style="font-size: 75%;" class="fas fa-landmark"> </span>
-                <div class="a-text">Istoric</div>
-            </a>
-        </li>
-        <li>
-            <a href="/produse"> <span style="font-size: 75%;" class="fas fa-cash-register"> </span>
-                <div class="a-text">Magazin</div>
-            </a>
-            <ul>
-                <li><a href="/produse/toate"> Toate </a> </li>
+        <%if(!locals.utilizator){%>
+            <style>
+                .popup .content {
+                    margin-top: 100px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -150%) scale(0);
+                    width: 300px;
+                    height: 450px;
+                    z-index: 2;
+                    text-align: center;
+                    padding: 20px;
+                    border-radius: 20px;
+                    background: var(--color_alternative);
+                    box-shadow: 38px 38px 56px #1e1e1e,
+                        -25px -25px 38px #1e1e1e;
+                    z-index: 5;
+                }
+
+                .popup .close-btn {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    width: 30px;
+                    height: 30px;
+                    color: white;
+                    font-size: 30px;
+                    border-radius: 50%;
+                    padding: 2px 5px 7px 5px;
+                    background: var(--color_alternative_lighter);
+                    box-shadow: 5px 5px 15px #1e1e1e,
+                        -5px -5px 15px #1e1e1e;
+                }
+
+                .popup.active .content {
+                    display: block;
+                    transition: all 300ms ease-in-out;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+
+                h1 {
+                    text-align: center;
+                }
+
+                .input-field .validate {
+                    padding: 20px;
+                    font-size: 16px;
+                    border-radius: 10px;
+                    border: none;
+                    margin-bottom: 15px;
+                    box-shadow: inset 5px 5px 5px #232323,
+                        inset -5px -5px 5px #292929;
+                    outline: none;
+                }
+
+                .first-button {
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 30px 50px;
+                    border-radius: 40px;
+                    border: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: translate(-50%, -50%);
+                    background: var(--color_alternative_lighter);
+                    box-shadow: 18px 18px 25px #1e1e1e,
+                        -15px -15px 25px #1e1e1e;
+                    transition: box-shadow .35s ease !important;
+                    outline: none;
+                }
+
+                .second-button {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 20px;
+                    padding: 20px 30px;
+                    border-radius: 40px;
+                    border: none;
+                    background: var(--color_alternative_lighter);
+                    box-shadow: 8px 8px 15px #202020,
+                        -8px -8px 15px #2c2c2c;
+                    transition: box-shadow .35s ease !important;
+                    outline: none;
+                }
+
+                .active {
+                    display: block;
+                }
+            </style>
+
+            <li>
+                <a href="/inregistrare"> <span style="font-size: 75%;" class="fas fa-user-plus"> </span>
+                    <div class="a-text">Inregistrare</div>
+                </a>
+            </li>
+            <li>
+                <a onclick='document.getElementById("popup-1").classList.toggle("active")'> <span
+                        style="font-size: 75%;" class="fas fa-sign-in-alt"> </span>
+                    <div class="a-text">Conectare</div>
+                </a>
+            </li>
+
+            <%} else {%>
+
+
+                <% if(locals.utilizator.rol=="comun" ){ %>
+                    <li>
+                        <a href="/profil"> <span style="font-size: 75%;" class="fas fa-user"> </span>
+                            <div class="a-text">Profilul meu</div>
+                        </a>
+                    </li>
+                    <% } else { %>
+                        <li>
+                            <a href="#"> <span style="font-size: 75%;" class="fas fa-users-cog"> </span>
+                                <div class="a-text">Administrare</div>
+                            </a>
+                            <ul>
+
+                                <li>
+                                    <a href="/stoc">Stoc</a>
+                                </li>
+                                <% if(locals.utilizator.rol=="admin" ){ %>
+                                    <li>
+                                        <a href="/users">Utilizatori</a>
+                                    </li>
+                                    <%} %>
+                                        <li>
+                                            <a href="/profil">Profilul meu</a>
+                                        </li>
+                            </ul>
+                        </li>
+                        <%} %>
+                            <li>
+                                <a href="#"> <span style="font-size: 75%;" class="fas fa-sign-out-alt"> </span>
+                                    <div class="a-text"> <a href='/deconectare'>Deconectare</a></div>
+                                </a>
+                            </li>
+                            <% }%>
+                                <li>
+                                    <a href="/istoric"> <span style="font-size: 75%;" class="fas fa-landmark"> </span>
+                                        <div class="a-text">Istoric</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/produse"> <span style="font-size: 75%;" class="fas fa-cash-register">
+                                        </span>
+                                        <div class="a-text">Magazin</div>
+                                    </a>
+                                    <ul>
+                                        <li> <a href='/cosvirtual'>Cos</a></li>
+                                        <li><a href="/produse/toate"> Toate </a> </li>
 <li><a href="/produse/jocuri"> Jocuri </a> </li>
 <li><a href="/produse/console"> Console </a> </li>
 <li><a href="/produse/accesorii"> Accesorii </a> </li>
 <li><a href="/produse/carduri-valorice"> Carduri Valorice </a> </li>
 
-            </ul>
-        </li>
-        <li>
-            <a href="/forum">Forum</a>
-        </li>
-        <li>
-            <a href="https://sites.google.com/view/sandbadog">Blog</a>
-        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/forum"> <span style="font-size: 75%;" class="fas fa-link"> </span>
+                                        <div class="a-text">Altele</div>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="/forum">Forum</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sites.google.com/view/sandbadog">Blog</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                </li>
+                                <span id="schimba_tema" class="far fa-sun"></span>
+                                <!-- fa-moon fa-circle -->
+                                </li>
+
     </ul>
+    <%if(!locals.utilizator){%>
+
+        <div class="popup" id="popup-1">
+            <div class="content">
+                <span class="close-btn far fa-times-circle"
+                    onclick='document.getElementById("popup-1").classList.toggle("active")'>
+                </span>
+                <h3>Conectare</h3>
+                <form method="post" action="/login" enctype="multipart/form-data">
+                    <p>
+                        <label>
+                            <input type="text" name="username" placeholder="Email" class="validate">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="password" name="parola" placeholder="Password" class="validate">
+                        </label>
+                    </p>
+                    <input type="submit" value="Conectare" class="second-button">
+                </form>
+                <p onclick="reseteazaParola();">Ti-ai uitat parola?</p>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                max = -1
+                let curr_url = document.URL
+                console.log(curr_url)
+                let el
+                for (x of document.getElementsByTagName('nav')[0].getElementsByTagName('a')) {
+                    if (x.href) {
+                        if (curr_url.startsWith(x.href)) {
+                            if (max < x.href.length) {
+                                el = x
+                                max = x.href.length
+                            }
+                        }
+                    }
+                }
+                if (el) {
+                    el.parentElement.style.backgroundColor = 'black'
+                }
+
+            }
+            async function reseteazaParola() {
+                for (x of document.getElementById('popup-1').getElementsByTagName('input')) {
+                    if (x.name == "username") {
+                        try {
+                            let result = await fetch('/api/v1/trimiteMailParola', {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify(Object.assign({ username: x.value }))
+                            })
+                            let json = await result.json()
+                            console.log(x.innerHTML)
+                            console.log(json)
+                            if (json.success == true) {
+                                alert(json.message)
+                                location.reload()
+                            } else {
+                                alert(json.toString())
+                            }
+                        }
+                        catch (error) {
+                            alert(error)
+                        }
+                        break
+                    }
+                }
+            }
+        </script>
+
+        <% }%>
 </nav>

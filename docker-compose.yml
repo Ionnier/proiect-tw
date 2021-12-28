@@ -9,5 +9,14 @@ services:
       POSTGRES_PASSWORD: postgresspa55
     volumes:
       - "pgdata:/var/lib/postgresql/data"
+  # cache:
+  #   image: redis:6.2.6
+  #   restart: always
+  #   ports:
+  #     - 6379:6379
+  #   volumes:
+  #     - ./redis.conf:/usr/local/etc/redis/redis.conf
+  #   command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+
 volumes:
-  pgdata:
+  pgdata: null

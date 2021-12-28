@@ -81,6 +81,9 @@ footer {
 #main-title #galerie {
   grid-area: galerie;
 }
+#main-title #locatie {
+  grid-area: locatie;
+}
 #main-title #galerie-animata {
   grid-area: galerie-animata;
 }

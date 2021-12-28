@@ -27,6 +27,26 @@ body {
     background-color: var(--color_default_darker);
 }
 
+body.dark {
+    --color_default: #70587c;
+    --og_color_default_light: #2c2131;
+    --og_color_default_darker: #8a699b;
+    --color_default_light: #2c2131;
+    --color_default_darker: #000000;
+    --color_alternative: #502f4c;
+    --color_alternative_lighter: #f9f4f5;
+    --text-color-ligth: black;
+    --text-color-dark: white;
+}
+
+body.luck {
+<%%$COLORS$%%>
+}
+
+body {
+    color: var(--text-color-dark);
+}
+
 header {
     grid-area: header;
 }

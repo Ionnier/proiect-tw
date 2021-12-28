@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Inregistrare</title>
+    <%- include("../fragmente/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+        <main>
+
+            <section class="text-container">
+                <% if ((locals.err=="" || locals.err==undefined) && locals.raspuns==undefined ){ %>
+                    <form id="form_inreg" method="post" class="date" action="/inreg" enctype="multipart/form-data">
+                        <p>
+                            <label>
+                                Username: <input type="text" name="username"
+                                    placeholder="prof<%=Math.floor(Math.random(1000000)) %>" required
+                                    pattern="[A-Za-z0-9]+">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Nume: <input type="text" name="nume" required
+                                    pattern="([A-Z][a-z]{2,}(-[A-Z][a-z]{2,})*)">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Prenume: <input type="text" name="prenume" required
+                                    pattern="([A-Z][a-z]{2,}(-[A-Z][a-z]{2,})*)">
+                            </label>
+                        </p>
+                        <p>
+                            <!-- prezentare -->
+                            <label>
+                                Parola: <input id="parl" type="password" name="parola" required value="">
+                            </label>
+                            <!--pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])" -->
+                        </p>
+                        <p>
+                            <label>
+                                Reintroduceti parola: <input id="rparl" type="password" name="rparl" required value="">
+                            </label>
+                        </p>
+                        <p>
+                            <!-- prezentare -->
+                            <label>
+                                Email: <input type="text" type="email" name="email" required
+                                    placeholder="whatever@domain.com" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Culoare text chat: <select name="culoareText">
+                                    <option value="red">rosu</option>
+                                    <option value="green">verde</option>
+                                    <option value="blue">albastru</option>
+                                </select>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Ocupatie: <select name="ocupatie">
+                                    <%if (locals.ocupatii){ %>
+                                        <% for(x of locals.ocupatii){ %>
+                                            <option value="<%- x %>">
+                                                <%- x %>
+                                            </option>
+                                            <%} %>
+                                                <option selected value="<%- locals.ocupatie_default%>">
+                                                    <%- locals.ocupatie_default%>
+                                                </option>
+                                                <%}%>
+                                </select>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Poza: <input type="file" name="poza">
+                            </label>
+                        </p>
+                        <p>
+                            <input type="submit" value="Trimite">
+                            <input type="reset" value="Reseteaza">
+                        </p>
+
+
+
+
+                    </form>
+                    <%} else {%>
+                        <p style="color: red;">
+                            <%- locals.err %>
+                        </p>
+                        <%}%>
+                            <% if(locals.raspuns){ %>
+                                <p style="color: green;">
+                                    <%- locals.raspuns %>
+                                </p>
+                                <% } %>
+
+            </section>
+
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+            <script>
+
+                window.onload = function () {
+                    if (document.getElementById("form_inreg")) {
+                        document.getElementById("form_inreg").onsubmit = function () {
+                            if (document.getElementById("parl").value == document.getElementById("rparl").value) {
+                                return true
+                            }
+                            var spanSuma;
+                            spanSuma = document.getElementById("numar-suma");
+                            if (!spanSuma) {
+                                spanSuma = document.createElement("span");
+                                spanSuma.innerHTML = "Ati introdus parola gresit!";
+                                spanSuma.id = "numar-suma";//<span id="..."
+                                document.getElementsByClassName("text-container")[0].appendChild(spanSuma);
+                                setTimeout(function () { document.getElementById("numar-suma").remove() }, 5000);
+                                return false
+                            }
+                            return false
+                        }
+                    }
+                }
+            </script>
+</body>
+
+</html>

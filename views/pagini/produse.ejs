@@ -48,6 +48,70 @@
 
 </head>
 
+<script>
+    function setLocalStorage(productId, productQuantity) {
+        let ids_produse = localStorage.getItem("produse_selectate")
+        if (ids_produse)
+            ids_produse = ids_produse.split(",");
+        else
+            ids_produse = []
+        //console.log("Selectie veche:", ids_produse);
+        //ids_produse.map(function(elem){return parseInt(elem)});
+        //console.log(ids_produse);
+        let indx = undefined;
+        for (let i = 0; i < ids_produse.length; i++) {
+            if (parseInt(ids_produse[i].split(":")[0]) == parseInt(productId)) {
+                indx = i;
+                break;
+            }
+        }
+        if (indx && parseInt(productQuantity) == 0) {
+            ids_produse.splice(indx, 1)
+        } else {
+            if (indx != undefined) {
+                ids_produse.splice(indx, 1);
+            }
+            ids_produse.push(`${productId}:${productQuantity}`)
+        }
+        console.log("Selectie noua:")
+        console.log(ids_produse);
+        localStorage.setItem("produse_selectate", ids_produse.join(","))
+    }
+
+    function setPage() {
+        if (localStorage.getItem("produse_selectate")) {
+            for (x of localStorage.getItem("produse_selectate").split(",")) {
+                let productId = parseInt(x.split(':')[0])
+                let productQuantity = parseInt(x.split(':')[1])
+                input = document.getElementById(`cantitate${productId}`)
+                // if(parseInt(input.max) < parseInt(x.split(':')[1]){
+                //     setLocalStorage()
+                // }
+                input.parentElement.style.backgroundColor = 'var(--color_alternative)'
+                if (input.max < productQuantity) {
+                    setLocalStorage(productId, input.max)
+                    productQuantity = input.max
+                }
+                input.value = `${parseInt(productQuantity)}`//Math.max(parseInt(input.max), parseInt(productQuantity))
+                //console.log(input)
+            }
+        }
+    }
+    window.onload = function () {
+        setPage()
+    }
+
+    function getInputValue(id) {
+        let input = document.getElementById(id)
+        let productId = id.replace('cantitate', '')
+        if (input.value == 0)
+            input.parentElement.style.backgroundColor = 'transparent'
+        console.log(productId, parseInt(input.value))
+        setLocalStorage(parseInt(productId), parseInt(input.value))
+        setPage()
+    }
+</script>
+
 <body>
     <%- include("../fragmente/header.ejs") %>
         <main>
@@ -125,6 +189,7 @@
                                 <p class="val-categorie">
                                     <%- pr.tip_produs %>
                                 </p>
+
                                 <div class="descimg">
                                     <p class="descriere">
                                         <%- pr.descriere %>
@@ -138,6 +203,9 @@
                                     <li class="greutate"> Greutate: <span class="val-greutate">
                                             <%- pr.greutate%>
                                         </span>
+                                    </li>
+                                    <li>
+                                        Stoc: <%- pr.stoc%>
                                     </li>
                                     <li class="compatibilitate"> Compatibilitate:
                                         <ul>
@@ -161,21 +229,20 @@
                             </a>
                             <label class="selecteaza-cos">
                                 Selectează:<br />
-                                <input style="display: block; width: 100%;" type="checkbox" class="select-cos"
-                                    value="<%-pr.id %>" autocomplete="off">
+                                <input style="display: block; width: 100%;" type="number" class="select-cos"
+                                    id="cantitate<%- pr.id %>" onKeyDown="return false" min=0
+                                    max="<%- parseInt((pr.stoc)?pr.stoc:10) %>" value=0 onclick="getInputValue(this.id)"
+                                    autocomplete="off">
                             </label>
                         </article>
                         <% } %>
-
-
                 </div>
-
-
             </section>
 
         </main>
         <%- include("../fragmente/footer.ejs") %>
 
 </body>
+
 
 </html>
