@@ -607,8 +607,7 @@ app.post("/inreg", async (req, res) => {
             let ocupatie = campuriText.ocupatie == pref_not ? undefined : campuriText.ocupatie
             let file_path = undefined
             let resource_path = "/resurse/imagini/def_profile_pic.png"
-            if (campuriFile && campuriFile.size == 1) {//&& !campuriFile.poza.length && mime.getType(campuriFile.poza.originalFilename).includes("image")) {
-                console.log(campuriFile)
+            if (campuriFile) {//&& !campuriFile.poza.length && mime.getType(campuriFile.poza.originalFilename).includes("image")) {
                 let folderUtilzitaor = path.join(__dirname, "resurse", "poze_utilizatori", campuriText.username)
                 if (!fs.existsSync(folderUtilzitaor))
                     fs.mkdirSync(folderUtilzitaor, { recursive: true })
@@ -644,15 +643,15 @@ app.post("/inreg", async (req, res) => {
                             link = `${protocol}${domeniu}/confirmare/${campuriText.username}/${token}`
                             subiect = `Cont nou`
                             text = `Bine ai venit în comunitatea Sandbadog.Username - ul tau este: ${campuriText.username}.Link de confirmare ${link}`
-                            html = `< h1 > Bine ai venit in comunitatea Sandbadog!</h1 > ` +
-                                `< p > Username - ul tau este` +
-                                `< span style = "font-weight: bold; color: green;" > ` +
+                            html = `<h1> Bine ai venit in comunitatea Sandbadog!</h1> ` +  
+                                `<p> Username - ul tau este` + 
+                                `<span style = "font-weight: bold; color: green;"> ` +
                                 ` ${campuriText.username} ` +
-                                `</span > ` +
-                                `</p > ` +
-                                `< p > Confirma mail - ul aici: <a href="${link}"> ${link}` +
+                                `</span> ` +
+                                `</p> ` +
+                                `<p> Confirma mail - ul aici: <a href="${link}"> ${link}` +
                                 `</a>` +
-                                `</p > `
+                                `</p>`
                             await trimiteMail(campuriText.email, subiect, text, html)
                             res.render("pagini/inregistrare", { raspuns: "Date adaugate cu succes. Te rog confirma mail-ul" })
                         }
@@ -799,8 +798,6 @@ priviliges = {
     'admin': 2
 }
 
-
-
 function restrictTo(...roles) {
     if (roles.length > 1 || parseInt(roles[0]) == NaN) {
         return (req, res, next) => {
@@ -837,7 +834,7 @@ function protect() {
     };
 }
 
-app.post('/api/v1/produs/:id/', (req, res, next) => {
+app.post('/api/v1/produs/:id/', restrictTo(1), (req, res, next) => {
     client.query('update produse set nume=$1, stoc=$2 where id=$3', [req.body.nume, req.body.stoc, req.params.id], (err, data) => {
         if (err)
             return next(err)
@@ -847,7 +844,7 @@ app.post('/api/v1/produs/:id/', (req, res, next) => {
     })
 })
 
-app.get('/stoc', (req, res, next) => {
+app.get('/stoc', restrictTo(1), (req, res, next) => {
     client.query('select id, nume, stoc from produse', (err, data) => {
         if (err)
             return next(err)
@@ -1155,7 +1152,7 @@ app.post("/cumpara", protect(), function (req, res) {
 
         let rezFactura = ejs.render(fs.readFileSync(pathFactura).toString("utf8"), { utilizator: req.session.utilizator, produse: rez.rows, protocol, domeniu });
         //console.log(rezFactura);
-        let options = { format: 'A4', args: ['--no-sandbox'] };
+        let options = { format: 'A4', args: ['--no-sandbox'], printBackground: true };
 
         let file = { content: rezFactura };
 

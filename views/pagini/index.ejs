@@ -28,8 +28,7 @@
                 <h1>Sanbadog</h1>
                 <span id="pb"></span>
                 <% if(locals.utilizator){ %>
-                    <p> Bine ai venit pe pagina noastra <%- `${locals.utilizator.prenume}
-                            ${locals.utilizator.prenume}`%>
+                    <p> Bine ai venit pe pagina noastra <%- `${locals.utilizator.nume} ${locals.utilizator.prenume}`%>
                     </p>
                     <img src="<%- (locals.utilizator.poza_profil) %>" alt="Poza Utilizator"> </img>
                     <%}else{ %>

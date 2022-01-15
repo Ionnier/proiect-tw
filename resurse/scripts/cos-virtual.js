@@ -143,8 +143,8 @@ window.addEventListener("load",function(){
                     p.innerHTML=raspunsText;
                     document.getElementsByTagName("main")[0].innerHTML="";
                     document.getElementsByTagName("main")[0].appendChild(p)
-                    // if(!raspunsText.includes("nu sunteti logat"))
-                    //     localStorage.removeItem("produse_selectate");
+                    if(!raspunsText.includes("nu sunteti logat"))
+                        localStorage.removeItem("produse_selectate");
                
                 }
                 ).catch(function(err){console.log(err)});

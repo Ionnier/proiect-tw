@@ -7,12 +7,14 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     else {
         if (tema == "dark") {
-            btn.classList.toggle('fa-sun')
             btn.classList.toggle('fa-moon')
+            btn.classList.remove('fa-sun')
+            btn.classList.remove('fa-circle')
             document.body.classList.add("dark");
         }
         else if (tema == "luck") {
-            btn.classList.toggle('fa-moon')
+            btn.classList.remove('fa-sun')
+            btn.classList.remove('fa-moon')
             btn.classList.toggle('fa-circle')
             document.body.classList.add("luck");
         }

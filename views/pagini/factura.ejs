@@ -5,13 +5,20 @@
     <meta charset="utf-8" />
     <title>Factură</title>
     <style>
-        body {
+        h1 {
             counter-reset: section;
         }
 
         span::before {
             counter-increment: section;
-            content: counter(section);
+            content: "asdasd";
+        }
+        p::before{
+            counter-increment: section;
+            content: "asdasd";
+        }
+        span{
+            color: blue;
         }
 
         #tabl {
@@ -21,19 +28,25 @@
         #tabl td,
         #tabl th {
             border: 1px solid black;
+            
+        }
+        td{
+            width: 100px;
         }
 
         p {
-            color: red
+            color: red;
         }
-
-        ;
     </style>
 </head>
 
 <body>
     <h1>Factură Sandbadog</h1>
     <p>Stimate domn <%-locals.utilizator.nume %>, aveți aici lista de produse achiziționate.</p>
+    <p>asd</p>
+    <p>asd</p>
+    <p>asd</p>
+    <p>asd</p>
     <table id="tabl">
         <thead>
             <tr>
@@ -49,7 +62,7 @@
             <% var suma=0; for (let prod of locals.produse) { suma+=(parseFloat(prod.pret)*parseInt(prod.cantitate)); %>
                 <tr>
                     <td>
-                        <span> .</span>
+                        <span>.</span>
                     </td>
                     <td>
                         <%- prod.nume %>

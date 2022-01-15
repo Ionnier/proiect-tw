@@ -57,7 +57,7 @@ function reset_range() {
 
 }
 
-window.onload = function () {
+window.addEventListener("DOMContentLoaded", function () {
     var btn = document.getElementById("filtrare");
     btn.onclick = function () {
         var optiuni = document.getElementById("i_sel_multiplu").options;
@@ -233,7 +233,7 @@ window.onload = function () {
         }
     }
     reset_range()
-}
+})
 window.onkeydown = function (e) {
     if (e.key == "c" && e.altKey == true) {
         var suma = 0;
